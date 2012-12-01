@@ -1,0 +1,49 @@
+/* Reset ----------------------------------------------------------------------*/
+
+html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote,
+pre, form, fieldset, table, th, td { margin: 0; padding: 0; }
+
+
+/* Basic Elements  ----------------------------------------------------------------------*/
+   
+body {
+	background: #e4edf0;
+  color: #373535;
+  font: 15px "Myriad Pro", "GeezaPro", "Trebuchet MS", "Lucinda Sans Unicode", "Arial", sans-serif;
+  line-height: 1;
+}
+
+a:link, a:visited {
+  color: #416d79;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+a:hover {
+  color: #3b8fa7;
+  text-decoration: underline;
+}
+
+ul li {
+  list-style: none;
+}
+
+/* Media Queries----------------------------------------------------*/
+@media screen and (min-width: 320px) {
+  
+}
+
+@media screen and (min-width: 500px) {
+
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 980px) {
+
+}
+
+@media screen and (min-width: 1280px) {
+
+}
