@@ -40,6 +40,29 @@ $(function () {
   });
   
   $(document).ready(function () {
+    var start = $('#water1').offset().top,
+        start2 = $('#water2').offset().top,
+        start3 = $('#water3').offset().top,
+      old,
+                height = $(window).height();
+    
+    $(window).scroll(_.throttle(function () {
+      var scrollTop = $(window).scrollTop(),
+          offset = $('#water1').offset().top,
+          offset2 = $('#water2').offset().top,
+          offset3 = $('#water3').offset().top,
+          multiplier = scrollTop > old ? .99 : 1,
+          position = scrollTop + height;
+      
+      if (position > start && scrollTop < offset) {
+        $('#water1').css('top', offset * multiplier);
+        $('#water2').css('top', offset2 * multiplier);
+        $('#water3').css('top', offset3 * multiplier);
+      }
+      
+      old = scrollTop;
+    
+    }, 10));
     /**
      * Create all of our clouds
      */
