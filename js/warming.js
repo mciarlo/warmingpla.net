@@ -2,6 +2,7 @@ $(function () {
   var Cloud,
       Slider,
       Life,
+      Food,
       SLIDER_MIN_MULTIPLIER = .98,
       SLIDER_MAX_MULTIPLIER = 1.03;
       
@@ -57,6 +58,9 @@ $(function () {
       this.el = this.options.el;
       this.max = this.options.max;
       this.min = this.options.min;
+      this.minMulti = this.options.minMulti;
+      this.maxMulti = this.options.maxMulti;
+      
       this.start = this.el.offset().top;
           
       $(window).scroll(this.checkPosition);
@@ -72,20 +76,72 @@ $(function () {
       if (scrollingDown) {
 
         // we should be animating
-        if (this.scrollTop + height > this.max) {
+        if (this.scrollTop + height > this.max - (height /10)) {
           
           if (offset > this.min) {
             var newTop = offset * SLIDER_MIN_MULTIPLIER < this.start - this.el.height() 
-                          ? this.start - this.el.height() : offset * SLIDER_MIN_MULTIPLIER;
+                          ? this.start - this.el.height() : offset * this.minMulti;
             
             this.el.css('top', newTop);
           }
         }
       } else {
             var newTop = offset * SLIDER_MAX_MULTIPLIER > this.start 
-                          ? this.start : offset * SLIDER_MAX_MULTIPLIER;
+                          ? this.start : offset * this.maxMulti;
             
             this.el.css('top', newTop);
+      }
+      
+      this.oldScrollTop = this.scrollTop;
+    },
+    
+    _setSettings: function(options) {
+      this.options = options;
+    }
+  });
+  
+  Food = function (options) {
+    this._setSettings(options || {});
+    this.initialize.apply(this, arguments);
+  };
+  
+  _.extend(Food.prototype, {
+    initialize : function () {
+      _.bindAll(this);
+      
+      this.el = this.options.el;
+      this.max = this.options.max;
+      this.minMulti = this.options.minMulti;
+      this.maxMulti = this.options.maxMulti;
+      
+      this.start = this.el.offset().top;
+          
+      $(window).scroll(this.checkPosition);
+    },
+    
+    checkPosition : function () {
+      this.scrollTop = $(window).scrollTop();
+      
+      var scrollingDown = this.scrollTop > this.oldScrollTop,
+          height = $(window).height(),
+          offset = this.el.offset().top;
+      
+      if (scrollingDown) {
+        // we should be animating
+        if (this.scrollTop + height > $('#price').offset().top) {
+          
+          if (offset > this.max) {
+            var newTop = offset * this.minMulti < this.max 
+                          ? this.max : offset * this.minMulti;
+            
+            this.el.css('top', newTop - $('#grocery').offset().top);
+          }
+        }
+      } else if (!scrollingDown && this.scrollTop + height > $('#price').offset().top) {
+            var newTop = offset * this.maxMulti > this.start 
+                          ? this.start : offset * this.maxMulti;
+            
+            this.el.css('top', newTop - $('#grocery').offset().top);
       }
       
       this.oldScrollTop = this.scrollTop;
@@ -150,8 +206,10 @@ $(function () {
       _.bindAll(this);
       
       this.el = this.options.el;
-          
-      $(window).scroll(_.throttle(this.checkPosition, 200));
+      this.id = this.el.attr('id');
+      this.height = $('#price').height();
+
+      $(window).scroll(_.throttle(this.checkPosition, this.options.rate));
     },
     
     checkPosition : function () {
@@ -160,22 +218,54 @@ $(function () {
       var scrollingDown = this.scrollTop > this.oldScrollTop,
           offset = $('#price').offset().top;
       
-      if (scrollingDown && this.scrollTop + $(window).height > offset) {
+      if (scrollingDown && this.scrollTop + $(window).height() > offset && this.scrollTop < offset + this.height) {   
 
-        // we should be animating
-          var newVal = parseInt(this.el.text(), 10) + 1;
+          this.animateUp();
+      } else if (!scrollingDown && this.scrollTop < offset + this.height && this.scrollTop + $(window).height() > offset){
+
           
-          newVal = newVal > 9 ? 9 : newVal;
-          this.el.text(newVal);
-      } else {
-        var newVal = parseInt(this.el.text(), 10) - 1;
-          
-        newVal = newVal < 0 ? 9 : newVal;
-        
-        this.el.text(newVal);
+          this.animateDown();
       }
       
       this.oldScrollTop = this.scrollTop;
+    },
+    
+    animateUp : function () {
+      // we should be animating
+      var newVal = parseInt(this.el.text(), 10) + 1;
+      
+      newVal = newVal > 9 ? 1 : newVal;
+      
+      var template = $('<div class="tag animated">' + newVal + '</div>').css({
+        top: this.el.height(),
+        left: this.el.position().left
+      });
+      
+      this.el.after(template);
+      
+      template.animate({top: 0}, 200, _.bind(function () {
+        this.el.text(newVal);
+        template.remove();
+      }, this));
+    },
+    
+    animateDown : function () {
+        var newVal = parseInt(this.el.text(), 10) - 1;
+          
+        newVal = newVal < 1 ? 9 : newVal;
+        
+          var template = $('<div class="tag animated">' + newVal + '</div>').css({
+            top: - this.el.height(),
+            left: this.el.position().left
+          });
+               
+          
+          this.el.before(template);
+  
+          template.animate({top: 0}, 200, _.bind(function () {
+            this.el.text(newVal);
+            template.remove();
+          }, this));
     },
     
     _setSettings: function(options) {
@@ -189,7 +279,7 @@ $(function () {
         
     $(window).scroll(function () {
       var scrollTop = $(window).scrollTop();
-      
+            
       if (scrollTop > 4600 && scrollTop <= 4900) {
         $('#virus13,#virus14,#virus15,#virus16,#virus17,#virus18,#virus19,#virus20,#virus25,#bacteria21,#bacteria22,#bacteria23,#bacteria24,#bacteria25,#bacteria26,#bacteria27,#bacteria28,#bacteria29,#bacteria30,#bacteria13,#bacteria14,#bacteria15,#bacteria16,#bacteria17').fadeIn();
       } else if (scrollTop > 4900 && scrollTop <= 5100) {
@@ -204,40 +294,169 @@ $(function () {
         $('#virus13,#virus14,#virus15,#virus16,#virus17,#virus18,#virus19,#virus20,#virus25,#bacteria21,#bacteria22,#bacteria23,#bacteria24,#bacteria25,#bacteria26,#bacteria27,#bacteria28,#bacteria29,#bacteria30,#bacteria13,#bacteria14,#bacteria15,#bacteria16,#bacteria17').fadeOut();
 $('#virus21,#virus22,#virus23,#virus24,#virus26,#virus27,#virus28,#virus30,#virus31,#bacteria18,#bacteria19,#bacteria20,#bacteria31,#bacteria32,#bacteria33,#bacteria34,#bacteria35,#bacteria36,#bacteria46,#bacteria40').fadeOut();
       }
+      
+      if (scrollTop > 0 && scrollTop <= 900) {
+              $('#mercury').css({height : '10%'});
+
+      } else if (scrollTop > 900 && scrollTop <= 2000) {
+                $('#mercury').css({height : '20%'});
+
+      }  else if (scrollTop > 2000 && scrollTop <= 4000) {
+                $('#mercury').css({height : '30%'});
+
+      } else if (scrollTop > 4000 && scrollTop <= 6000) {
+                $('#mercury').css({height : '40%'});
+
+      }
+       else if (scrollTop > 6000 && scrollTop <= 8000) {
+                $('#mercury').css({height : '50%'});
+
+      }
+       else if (scrollTop > 8000 && scrollTop <= 10000) {
+                $('#mercury').css({height : '60%'});
+
+      } else if (scrollTop > 10000 && scrollTop <= 11000) {
+                $('#mercury').css({height : '70%'});
+
+      }
+      else if (scrollTop > 11000 && scrollTop <= 12000) {
+                $('#mercury').css({height : '80%'});
+
+      }else if (scrollTop > 10000) {
+                  $('#mercury').css({height : '100%'});
+
+      }
+      
+      
     });
     
     new Slider({
       el : $('#water1'),
       min : waterMin,
-      max : waterMax
+      max : waterMax,
+      maxMulti : 1.03,
+      minMulti : .98
     });   
     
     new Slider({
       el : $('#water2'),
       min : waterMin,
-      max : waterMax
+      max : waterMax,
+      maxMulti : 1.03,
+      minMulti : .98
     });
     
     new Slider({
       el : $('#water3'),
       min : waterMin,
-      max : waterMax
+      max : waterMax,
+      maxMulti : 1.03,
+      minMulti : .98
+    });
+    
+    new Food({
+      el : $('#orange'),
+      max : $('#grocery').offset().top,
+      maxMulti : 1.01,
+      minMulti : .99,
+      rate : 1000
+    });
+    
+    new Food({
+      el : $('#milk'),
+      max : $('#grocery').offset().top,
+      maxMulti : 1.01,
+      minMulti : .99,
+    });
+    
+    new Food({
+      el : $('#loaf'),
+      max : $('#grocery').offset().top,
+      maxMulti : 1.02,
+      minMulti : .999
+    });
+    
+    new Food({
+      el : $('#steak'),
+      max : $('#grocery').offset().top,
+      maxMulti : 1.01,
+      minMulti : .99
+    });
+    
+    new Food({
+      el : $('#eggs'),
+      max : $('#grocery').offset().top,
+      maxMulti : 1.01,
+      minMulti : .99
+    });
+    
+    /*new Food({
+      el : $('#loaf1'),
+      max : $('#grocery').offset().top,
+      maxMulti : 1.022,
+      minMulti : .99
+    });
+    
+    new Food({
+      el : $('#loaf2'),
+      max : $('#grocery').offset().top,
+      maxMulti : 1.022,
+      minMulti : .99
+    });
+    
+    new Food({
+      el : $('#loaf3'),
+      max : $('#grocery').offset().top,
+      maxMulti : 1.03,
+      minMulti : .99
+    });
+    
+    new Food({
+      el : $('#loaf4'),
+      max : $('#grocery').offset().top,
+      maxMulti : 1.022,
+      minMulti : .99
+    });
+    
+    new Food({
+      el : $('#loaf5'),
+      max : $('#grocery').offset().top,
+      maxMulti : 1.022,
+      minMulti : .99
+    });
+    
+    new Food({
+      el : $('#loaf6'),
+      max : $('#grocery').offset().top,
+      maxMulti : 1.022,
+      minMulti : .99
+    });
+    
+    new Food({
+      el : $('#loaf7'),
+      max : $('#grocery').offset().top,
+      maxMulti : 1.022,
+      minMulti : .99
+    });*/
+    
+    new Tile({
+      el : $('#tag1'),
+      rate : 1000
     });
     
     new Tile({
-      el : $('#tag1')
+      el : $('#tag2'),
+      rate:  500
     });
     
-    new Tile({
-      el : $('#tag2')
+    var tag3 = new Tile({
+      el : $('#tag3'),
+      rate : 200
     });
     
-    new Tile({
-      el : $('#tag3')
-    });
-    
-    new Tile({
-      el : $('#tag4')
+    var tag4 = new Tile({
+      el : $('#tag4'),
+      rate : 10
     });
     
     _.each($('.life'), function (animal) {

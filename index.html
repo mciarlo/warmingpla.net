@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 <head profile="http://gmpg.org/xfn/11">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <link href='http://fonts.googleapis.com/css?family=Chau+Philomene+One:400italic|Patua+One' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Chau+Philomene+One|Chau+Philomene+One:400italic|Patua+One' rel='stylesheet' type='text/css'>
   <link href='css/style.css' rel='stylesheet' type='text/css'>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script src="js/underscore.min.js"></script>
   <script src="js/warming.js"></script>
 </head>
   <body>
+    <div id="thermometer">
+      <div id="mercury"></div>
+    </div>
     <div id="cloudscape">
       <h1>
         <span class="left-cap"></span>
@@ -857,10 +860,10 @@
         <div id="price-top"></div>
         <div id="pricetags">
           <span class="tag smaller">$</span>
-          <span id="tag1" class="tag">1</span>
+          <span id="tag1" class="tag">4</span>
           <span id="tag2" class="tag">3</span>
           <span class="tag small">.</span>
-          <span id="tag3" class="tag">7</span>
+          <span id="tag3" class="tag">9</span>
           <span id="tag4" class="tag">9</span>
         </div>
         <div id="price-bottom"></div>
@@ -895,7 +898,18 @@
         </div>
       </div>
       
-      <div class="bread food">
+      <div id="loaf" class="bread food">
+        <div class="bread-cut first"></div>
+        <div class="bread-cut"></div>
+        <div class="bread-cut"></div>
+        <div class="bread-cut"></div>
+        <div class="bread-cut last"></div>
+      </div>
+    
+      
+      <div id="steak" class="food"></div>
+      
+      <div id="loaf1" class="bread food">
         <div class="bread-cut first"></div>
         <div class="bread-cut"></div>
         <div class="bread-cut"></div>
@@ -903,7 +917,53 @@
         <div class="bread-cut last"></div>
       </div>
       
-      <div id="steak" class="food"></div>
+      <div id="loaf2" class="bread food">
+        <div class="bread-cut first"></div>
+        <div class="bread-cut"></div>
+        <div class="bread-cut"></div>
+        <div class="bread-cut"></div>
+        <div class="bread-cut last"></div>
+      </div>
+      
+      <div id="loaf3" class="bread food">
+        <div class="bread-cut first"></div>
+        <div class="bread-cut"></div>
+        <div class="bread-cut"></div>
+        <div class="bread-cut"></div>
+        <div class="bread-cut last"></div>
+      </div>
+      
+      <div id="loaf4" class="bread food">
+        <div class="bread-cut first"></div>
+        <div class="bread-cut"></div>
+        <div class="bread-cut"></div>
+        <div class="bread-cut"></div>
+        <div class="bread-cut last"></div>
+      </div>
+      
+      <div id="loaf5" class="bread food">
+        <div class="bread-cut first"></div>
+        <div class="bread-cut"></div>
+        <div class="bread-cut"></div>
+        <div class="bread-cut"></div>
+        <div class="bread-cut last"></div>
+      </div>
+      
+      <div id="loaf6" class="bread food">
+        <div class="bread-cut first"></div>
+        <div class="bread-cut"></div>
+        <div class="bread-cut"></div>
+        <div class="bread-cut"></div>
+        <div class="bread-cut last"></div>
+      </div>
+      
+      <div id="loaf7" class="bread food">
+        <div class="bread-cut first"></div>
+        <div class="bread-cut"></div>
+        <div class="bread-cut"></div>
+        <div class="bread-cut"></div>
+        <div class="bread-cut last"></div>
+      </div>
     </div>
     
     <div id="violence">
@@ -913,5 +973,16 @@
       <div id="smoke3" class="smoke"></div>
       <div id="smoke4" class="smoke"></div>
     </div>
+    
+    <div id="take-action">
+      <h2>Take Action</h2>
+    </div>
+    
+    <footer>
+      <span id="heart"><img src="images/heart_icon.png" alt="heart_icon" width="" height="" /></span>
+        <p>Lovingly crafted in NYC</p>
+        <p class="small">A side-project of <a id="twitter-link" href="#">@mciarlo</a> | <a id="back-to-top" href="#">Back to the Top &uarr;</a></p>
+        
+    </footer>
 	</body>
 </html>
