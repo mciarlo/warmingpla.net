@@ -280,20 +280,6 @@ $(function () {
     $(window).scroll(function () {
       var scrollTop = $(window).scrollTop();
             
-      if (scrollTop > 4600 && scrollTop <= 4900) {
-        $('#virus13,#virus14,#virus15,#virus16,#virus17,#virus18,#virus19,#virus20,#virus25,#bacteria21,#bacteria22,#bacteria23,#bacteria24,#bacteria25,#bacteria26,#bacteria27,#bacteria28,#bacteria29,#bacteria30,#bacteria13,#bacteria14,#bacteria15,#bacteria16,#bacteria17').fadeIn();
-      } else if (scrollTop > 4900 && scrollTop <= 5100) {
-        $('#virus13,#virus14,#virus15,#virus16,#virus17,#virus18,#virus19,#virus20,#virus25').fadeIn();
-        $('#virus21,#virus22,#virus23,#virus24,#virus26,#virus27,#virus28,#virus30,#virus31,#bacteria18,#bacteria19,#bacteria20,#bacteria31,#bacteria32,#bacteria33,#bacteria34,#bacteria35,#bacteria36,#bacteria46,#bacteria40').fadeIn();
-      } else if (scrollTop > 5100) {
-        $('.virus').fadeIn();
-        $('.bacteria').fadeIn();
-      } else {
-        $('#virus29,#virus32,#virus33,#virus34,#virus35,#virus36').fadeOut();
-        $('#bacteria37,#bacteria38,#bacteria39,#bacteria41,#bacteria42,#bacteria43,#bacteria44,#bacteria45,#bacteria47').fadeOut();
-        $('#virus13,#virus14,#virus15,#virus16,#virus17,#virus18,#virus19,#virus20,#virus25,#bacteria21,#bacteria22,#bacteria23,#bacteria24,#bacteria25,#bacteria26,#bacteria27,#bacteria28,#bacteria29,#bacteria30,#bacteria13,#bacteria14,#bacteria15,#bacteria16,#bacteria17').fadeOut();
-$('#virus21,#virus22,#virus23,#virus24,#virus26,#virus27,#virus28,#virus30,#virus31,#bacteria18,#bacteria19,#bacteria20,#bacteria31,#bacteria32,#bacteria33,#bacteria34,#bacteria35,#bacteria36,#bacteria46,#bacteria40').fadeOut();
-      }
       
       if (scrollTop > 0 && scrollTop <= 900) {
               $('#mercury').css({height : '10%'});
@@ -323,8 +309,22 @@ $('#virus21,#virus22,#virus23,#virus24,#virus26,#virus27,#virus28,#virus30,#viru
                 $('#mercury').css({height : '80%'});
 
       }else if (scrollTop > 10000) {
-                  $('#mercury').css({height : '100%'});
+                  $('#mercury').css({height : '90%'});
 
+      }
+      
+      if (scrollTop > 600 && scrollTop + $(window).height() < $('#wrapper').height() - 1000) {
+        $('#thermometer').removeClass().addClass('fixed')
+      } else if (scrollTop + $(window).height() > $('#wrapper').height() - 1000) {
+                $('#thermometer').removeClass('fixed').addClass('end');
+
+      } else {
+        $('#thermometer').removeClass()
+      
+      }
+      
+      if (scrollTop > 5794) {
+        $('#petri-dish').addClass('active');
       }
       
       
@@ -520,13 +520,13 @@ $('#virus21,#virus22,#virus23,#virus24,#virus26,#virus27,#virus28,#virus30,#viru
     
     new Cloud({
       el : $('#cloud10'),
-      delay : 3400,
+      delay : 2200,
       speed: 85 * 1000
     });
     
     new Cloud({
       el : $('#cloud11'),
-      delay : 2400,
+      delay : 1800,
       speed: 165 * 1000
     });
     
@@ -550,7 +550,7 @@ $('#virus21,#virus22,#virus23,#virus24,#virus26,#virus27,#virus28,#virus30,#viru
     
     new Cloud({
       el : $('#cloud15'),
-      delay : 1900,
+      delay : 800,
       speed: 155 * 1000
     });
   });
