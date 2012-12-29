@@ -229,7 +229,9 @@ $(function () {
       this.setData();
       
       // assume we may be refreshed down the page
-      this.checkPosition();
+      if (!checkforMobile()) {
+        this.checkPosition();
+      }
     },
     
     setData : function () {
@@ -318,7 +320,9 @@ $(function () {
 
       this.parentOffset = $('#petri-dish').offset().top;
 
-      this.$el.hide();
+      if (!checkforMobile()) {
+        this.$el.hide();
+      }
     },
     
     onScroll : function () {      
