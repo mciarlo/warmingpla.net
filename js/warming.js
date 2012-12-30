@@ -221,7 +221,7 @@ $(function () {
       
       resetToolbar();
       
-      if (!IS_DESKTOP_CAPABLE) {
+      if (!IS_WIDE) {
         if (scrollTop > 1011 &&  scrollTop < 1845) {
           $('#storms').addClass('active');
         } else if (scrollTop > 1845 && scrollTop < 2523) {
