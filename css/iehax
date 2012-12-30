@@ -1,0 +1,7 @@
+.bacteria.short {
+	background: transparent url(../images/cells.png) 0 0 no-repeat;
+}
+
+.bacteria.long {
+	background: transparent url(../images/cells.png) bottom left no-repeat;
+}
