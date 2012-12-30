@@ -35,6 +35,25 @@ ul li {
   list-style: none;
 }
 
+.social-heading {
+  font-size: 1em;
+}
+#tweet-btn {
+  font-size: .8em;
+  padding: .3em 1em;
+  font-family: Trebuchet MS, sans-serif;
+  border: none;
+background: rgb(242,242,242);
+background: -moz-linear-gradient(top, rgba(242,242,242,1) 0%, rgba(224,224,224,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(242,242,242,1)), color-stop(100%,rgba(224,224,224,1)));
+background: -webkit-linear-gradient(top, rgba(242,242,242,1) 0%,rgba(224,224,224,1) 100%);
+background: -o-linear-gradient(top, rgba(242,242,242,1) 0%,rgba(224,224,224,1) 100%);
+background: -ms-linear-gradient(top, rgba(242,242,242,1) 0%,rgba(224,224,224,1) 100%);
+background: linear-gradient(to bottom, rgba(242,242,242,1) 0%,rgba(224,224,224,1) 100%);
+  border-radius: 3px;
+  color: #2385D3;
+}
+
 #main-heading{
   margin: 0 auto;
   width: 90%;
@@ -1731,6 +1750,7 @@ display: none;
 #fish21 {
   top: 365px;
   left: 31%;
+  display: none;
 }
 
 #fish22 {
@@ -1764,6 +1784,7 @@ display: none;
   left: 100px;
   z-index: 20;
   -webkit-transform: scaleX(-1);
+  display: none;
 }
 
 #fish27 {
@@ -1791,6 +1812,7 @@ display: none;
 #fish30 {
   top: 392px;
   left: 35%;
+  display: none;
   z-index: 20;
 }
 
@@ -1804,12 +1826,14 @@ display: none;
   top: 562px;
   left: 43%;
   z-index: 20;
+  display: none;
 }
 
 #fish32 {
   top: 261px;
   left: 33%;
   z-index: 20;
+  display: none;
 }
 
 
@@ -1825,26 +1849,9 @@ display: none;
 }
 
 
-#fish26 {
-
-  -webkit-animation: 35100ms dallyreverse linear infinite;
-}
-
-
 #fish30 {
 
   -webkit-animation: 50100ms normalswim linear infinite;
-}
-
-#fish31 {
-
-  -webkit-animation: 55100ms normalswim linear infinite;
-}
-
-
-#fish32 {
-
-  -webkit-animation: 45100ms dallyreverse linear infinite;
 }
 
 /* Petri Dish -------------------*/
@@ -3622,14 +3629,14 @@ content: ".";
   text-align: left;
   font-size: 1.1em;
   line-height: 1.4;
-  padding: 0 0 20px 100px;
+  padding: 0 0 20px 120px;
   color: #73797E;
   display: block;
   background: #fff;
   font-family: Georgia, serif;
-  background: transparent url(../images/template_icon_bg_mobile.png) 0 4px no-repeat;
+  background: transparent url(../images/template_icon_bg_mobile.png) 10px 4px no-repeat;
   border-bottom: 5px solid #BEC7CF;
-
+  min-height: 48px;
 }
 
 #lamar {
@@ -3859,6 +3866,9 @@ footer a:hover {
   border-bottom: 1px dotted #888;
 }
 
+#social {
+  padding: 30px 0 0;
+}
 
 /* Media Queries----------------------------------------------------*/
 @media screen and (min-width: 320px) {
@@ -3973,7 +3983,7 @@ margin: 0 0 0 1%;
 
 #wrapper {
   width: 768px;
-  margin: 0 auto 50px auto;
+  margin: 0 auto 0 auto;
 }
 
 
@@ -4592,7 +4602,7 @@ top: 0;
 
 #water1 {
   z-index: 3;
-  top: 1700px;
+  top: 1250px;
 }
 
 #water1 .waves {
@@ -4601,12 +4611,12 @@ top: 0;
 
 #water2 {
   z-index: 11;
-  top: 1750px;
+  top: 1300px;
 }
 
 #water3 {
   z-index: 0;
-  top: 1650px;
+  top: 1200px;
 }
 
 #water2 .waves {
@@ -4628,7 +4638,7 @@ top: 0;
   background: -o-linear-gradient(top, rgba(25,34,51,1) 0%,rgba(32,44,65,1) 10%);
   background: -ms-linear-gradient(top, rgba(25,34,51,1) 0%,rgba(32,44,65,1) 10%);
   background: linear-gradient(to bottom, rgba(25,34,51,1) 0%,rgba(32,44,65,1) 10%);
-  height: 1000px;
+  height: 1600px;
   width: 100%;
 }
 
@@ -6832,8 +6842,9 @@ footer {
   padding: 40px 0 35px;
   position: relative;
   text-align: center;
-float: left;
-width: 100%;
+  width: 768px;
+  float: none;
+  margin: 0 auto;
 }
 
 #heart {
@@ -6906,7 +6917,9 @@ footer a:hover {
   display: inline-block;
 }
 
-
+#wrapper {
+  margin-bottom: 50px;
+}
 
 #rock1 {
   left: -100px;
@@ -7817,6 +7830,16 @@ width: 100%;
   text-align: center;
 }
 
+#water1 {
+  top: 1700px;
+}
+#water2 {
+  top: 1750px;
+}
+
+#water3 {
+  top: 1650px;
+}
 
 .play-btn {
 display: none;
