@@ -15,7 +15,7 @@ $(function () {
           return true;
         }
       },
-      IS_WIDE = $(window).width() < 768,
+      IS_WIDE = $(window).width() >= 768,
       IS_DESKTOP_CAPABLE = checkforMobile(),
       SCROLL_THROTTLE = 10,
       WATER_TOP_OFFSET = 600,
