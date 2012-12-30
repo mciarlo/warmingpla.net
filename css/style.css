@@ -1351,7 +1351,6 @@ ul li {
   position: absolute;
   border-radius: 80px 50px 70px 50px;
   box-shadow: 0px 0px 20px 5px #ae1313;
-  behavior:url(border-radius.htc);
 }
 
 .virus.dark {
@@ -2354,7 +2353,6 @@ ul li {
   top: 750px;
   left: 76px;
   border-radius: 80px 80px 60px 60px/45px 45px 30px 30px;
-  behavior:url(border-radius.htc);
 }
 
 .bread-cut {
@@ -2371,7 +2369,6 @@ ul li {
   background: -ms-linear-gradient(-45deg,  rgba(158,113,69,1) 1%,rgba(158,113,69,1) 44%,rgba(99,54,9,1) 56%,rgba(78,48,21,1) 100%);
   background: linear-gradient(135deg,  rgba(158,113,69,1) 1%,rgba(158,113,69,1) 44%,rgba(99,54,9,1) 56%,rgba(78,48,21,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9e7145', endColorstr='#4e3015',GradientType=1 );
-  behavior:url(border-radius.htc);
 }
 
 .bread-cut.first {
@@ -2389,6 +2386,7 @@ ul li {
   position: absolute;
   top: 68%;
   left: 2%;
+  border-radius: 80px 45px 30px 80px/80px 115px 95px 130px;
 }
 
 #loaf1 .bread-cut,

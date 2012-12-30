@@ -2,6 +2,7 @@
 	background: transparent url(../images/cells.png) 0 0 no-repeat;
 	border: none;
 	width: 28px;
+	filter: none;
 }
 
 .bacteria.short {
@@ -11,7 +12,29 @@
 
 .bacteria.long {
 	height: 278px;
-	background-position: bottom left;
+	background-position: 0 -28px;
+}
+
+.virus {
+	background: transparent url(../images/cells.png) 0 0 no-repeat;
+	border: none;
+	filter: none;
+}
+
+.virus.small {
+	background-position: 0 -56px;
+}
+
+.virus.medium {
+	background-position: -26px -56px;
+}
+
+.virus.large {
+	background-position: -82px -56px;
+}
+
+.virus.xlarge {
+	background-position: -220px -56px;
 }
 
 @media screen and (min-width: 768px) {
@@ -30,5 +53,27 @@
 	.bacteria.long {
 		height: 278px;
 		background-position: bottom left;
+	}
+
+	.virus {
+		background: transparent url(../images/cells.png) 0 0 no-repeat;
+		border: none;
+		filter: none;
+	}
+
+	.virus.small {
+		background-position: 0 -56px;
+	}
+
+	.virus.medium {
+		background-position: -26px -56px;
+	}
+
+	.virus.large {
+		background-position: -82px -56px;
+	}
+
+	.virus.xlarge {
+		background-position: -220px -56px;
 	}
 }
