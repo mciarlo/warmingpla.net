@@ -1351,6 +1351,7 @@ ul li {
   position: absolute;
   border-radius: 80px 50px 70px 50px;
   box-shadow: 0px 0px 20px 5px #ae1313;
+  behavior:url(border-radius.htc);
 }
 
 .virus.dark {
@@ -2340,19 +2341,20 @@ ul li {
 
 .bread {
   background: rgb(121,82,44);
-  background: -moz-linear-gradient(top,  rgba(121,82,44,1) 1%, rgba(99,54,9,1) 66%, rgba(64,35,5,1) 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(121,82,44,1)), color-stop(66%,rgba(99,54,9,1)), color-stop(100%,rgba(64,35,5,1)));
-  background: -webkit-linear-gradient(top,  rgba(121,82,44,1) 1%,rgba(99,54,9,1) 66%,rgba(64,35,5,1) 100%);
-  background: -o-linear-gradient(top,  rgba(121,82,44,1) 1%,rgba(99,54,9,1) 66%,rgba(64,35,5,1) 100%);
-  background: -ms-linear-gradient(top,  rgba(121,82,44,1) 1%,rgba(99,54,9,1) 66%,rgba(64,35,5,1) 100%);
-  background: linear-gradient(to bottom,  rgba(121,82,44,1) 1%,rgba(99,54,9,1) 66%,rgba(64,35,5,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#79522c', endColorstr='#402305',GradientType=0 );
+  background: -moz-linear-gradient(left,  rgba(121,82,44,1) 0%, rgba(99,54,9,1) 66%, rgba(64,35,5,1) 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(121,82,44,1)), color-stop(66%,rgba(99,54,9,1)), color-stop(100%,rgba(64,35,5,1)));
+  background: -webkit-linear-gradient(left,  rgba(121,82,44,1) 0%,rgba(99,54,9,1) 66%,rgba(64,35,5,1) 100%);
+  background: -o-linear-gradient(left,  rgba(121,82,44,1) 0%,rgba(99,54,9,1) 66%,rgba(64,35,5,1) 100%);
+  background: -ms-linear-gradient(left,  rgba(121,82,44,1) 0%,rgba(99,54,9,1) 66%,rgba(64,35,5,1) 100%);
+  background: linear-gradient(to right,  rgba(121,82,44,1) 0%,rgba(99,54,9,1) 66%,rgba(64,35,5,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#79522c', endColorstr='#402305',GradientType=1 );
   width: 400px;
   height: 70px;
   position: absolute;
   top: 750px;
   left: 76px;
   border-radius: 80px 80px 60px 60px/45px 45px 30px 30px;
+  behavior:url(border-radius.htc);
 }
 
 .bread-cut {
@@ -2369,6 +2371,7 @@ ul li {
   background: -ms-linear-gradient(-45deg,  rgba(158,113,69,1) 1%,rgba(158,113,69,1) 44%,rgba(99,54,9,1) 56%,rgba(78,48,21,1) 100%);
   background: linear-gradient(135deg,  rgba(158,113,69,1) 1%,rgba(158,113,69,1) 44%,rgba(99,54,9,1) 56%,rgba(78,48,21,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9e7145', endColorstr='#4e3015',GradientType=1 );
+  behavior:url(border-radius.htc);
 }
 
 .bread-cut.first {
@@ -2386,7 +2389,6 @@ ul li {
   position: absolute;
   top: 68%;
   left: 2%;
-  border-radius: 80px 45px 30px 80px/80px 115px 95px 130px;
 }
 
 #loaf1 .bread-cut,

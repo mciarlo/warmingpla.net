@@ -19,6 +19,7 @@
 		background: transparent url(../images/cells.png) 0 0 no-repeat;
 		border: none;
 		width: 28px;
+		filter: none;
 	}
 
 	.bacteria.short {
