@@ -5,8 +5,17 @@ $(function () {
       TagView,
       WarmingState,
       checkforMobile = function() {
-        return $(window).width() < 768;
+        var isMobile = (/iphone|ipod|android|blackberry|opera mini|opera mobi|skyfire|maemo|windows phone|palm|iemobile|symbian|symbianos|fennec/i.test(navigator.userAgent.toLowerCase())),
+        isTablet = (/ipad|android 3|sch-i800|playbook|tablet|kindle|gt-p1000|sgh-t849|shw-m180s|a510|a511|a100|dell streak|silk/i.test(navigator.userAgent.toLowerCase())),
+        windowWidth = $(window).width();
+
+        if (windowWidth < 768 || isMobile || isTablet) {
+          return false;
+        } else {
+          return true;
+        }
       },
+      IS_DESKTOP_CAPABLE = checkforMobile(),
       SCROLL_THROTTLE = 10,
       WATER_TOP_OFFSET = 600,
       WATER_VIEW_START = 12370,
@@ -50,7 +59,7 @@ $(function () {
       
       this.offset = this.$el.offset().top;
        
-      if (!checkforMobile()) {  
+      if (IS_DESKTOP_CAPABLE) {  
         this.model.on('change', this.checkPosition);
       }
     },
@@ -211,7 +220,7 @@ $(function () {
       
       resetToolbar();
       
-      if (isMobile) {
+      if (!IS_DESKTOP_CAPABLE) {
         if (scrollTop > 1011 &&  scrollTop < 1845) {
           $('#storms').addClass('active');
         } else if (scrollTop > 1845 && scrollTop < 2523) {
@@ -269,7 +278,7 @@ $(function () {
             '#cityscape'  : 7180
           };
         
-        offset = isMobile ? offsetValuesMobile[href] : offsetValuesDefault[href]
+        offset = !IS_DESKTOP_CAPABLE ? offsetValuesMobile[href] : offsetValuesDefault[href]
         
         $('body').animate({scrollTop : offset}, SCROLL_SPEED);
       }
