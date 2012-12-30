@@ -1175,6 +1175,69 @@ top: 0;
   width: 100%;
 }
 
+/* Prevention ---------------*/
+#prevention-steps {
+    background: rgb(32,44,65);
+    padding: 0 50px 45px 50px;
+  position: relative;
+  z-index: 20;
+}
+#prevention-steps:after {
+  clear: both;
+  content: '';
+  display: block
+}
+
+#prevention-heading {
+  font-size: 3em;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+text-align: center;
+font-size: 3.6em;
+padding: 0 0 .3em 0;
+font-weight: normal;
+z-index: 10;
+text-transform: uppercase;
+line-height: 1.1;
+border-bottom: 5px solid #2E4353;
+margin-bottom: .7em;
+}
+
+#prevention-steps p {
+  display: block;
+  color: white;
+  text-align: center;
+  font-size: 1.6em;
+  line-height: 1.4;
+  font-family: Trebuchet MS, sans-serif;
+  margin-bottom: 2em;
+}
+
+#prevention-steps li {
+  float: left;
+  display: inline-block;
+  width: 31%;
+  margin-right: 2%;
+  color: #798aa2;
+  height: 110px;
+  font-family: Trebuchet MS, sans-serif;
+  line-height: 1.4;
+}
+
+#prevention-steps strong {
+  display: block;
+  color: white;
+}
+
+#prevention-heading span {
+  font-size: .3em;
+  display: block;
+  letter-spacing: 1em;
+  margin-bottom: .4em;
+  }
+
 
 /* Ocean */
 #ocean {
@@ -2641,9 +2704,28 @@ background: linear-gradient(to bottom, rgba(26,26,28,1) 0%,rgba(0,0,0,1) 100%);
   position: relative;
 }
 
-.tag.animated {
+.fixed-tag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.animating-tag {
   z-index: 1;
   position: absolute;
+  left: 0;
+  top: 100%;
+  height: 100%;
+  width: 100%;
+background: rgb(26,26,28);
+background: -moz-linear-gradient(top, rgba(26,26,28,1) 0%, rgba(0,0,0,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(26,26,28,1)), color-stop(100%,rgba(0,0,0,1)));
+background: -webkit-linear-gradient(top, rgba(26,26,28,1) 0%,rgba(0,0,0,1) 100%);
+background: -o-linear-gradient(top, rgba(26,26,28,1) 0%,rgba(0,0,0,1) 100%);
+background: -ms-linear-gradient(top, rgba(26,26,28,1) 0%,rgba(0,0,0,1) 100%);
+background: linear-gradient(to bottom, rgba(26,26,28,1) 0%,rgba(0,0,0,1) 100%);
 }
 
 .tag:first-child {
@@ -3588,7 +3670,7 @@ background-position: -297px -160px;
 #take-action {
   position: relative;
   background: #d3dae3;
-  padding: 30px 25px 60px 25px;
+  padding: 30px 25px 50px 25px;
   z-index: 15;
 }
 
@@ -3738,6 +3820,7 @@ width: 100%;
 width: 28%;
 margin-left: 2%;
 float: left;
+
 background: #70351C;
   border: 1px solid #550F0F;
   padding: 9px 20px 12px;
@@ -6626,7 +6709,7 @@ background: radial-gradient(ellipse at center, rgba(79,79,79,1) 0%,rgba(38,38,38
 #take-action {
   position: relative;
   background: #d3dae3;
-  padding: 50px 50px 45px 50px;
+  padding: 50px 50px 60px 50px;
   z-index: 15;
 }
 
@@ -6762,6 +6845,8 @@ right: 0;
   font-size: 1.3em;
   padding: 14px 10px 15px 50px;
   margin: 0 auto;
+  width: 400px;
+  float: none;
   display: block;
   border: 1px solid #adb4bc;
   outline: none;
@@ -6776,7 +6861,11 @@ width: 100%;
 }
 
 #submit {
-
+float: none;
+position: absolute;
+top: 0;
+width: 100px;
+left: 419px;
 background: #70351C;
   border: 1px solid #550F0F;
   padding: 14px 20px 16px;
@@ -7731,8 +7820,10 @@ right: 0;
 #zipcode {
   font-size: 1.3em;
   padding: 14px 10px 15px 50px;
+  width: 400px;
   margin: 0 auto;
   display: block;
+  float: none;
   border: 1px solid #adb4bc;
   outline: none;
   background: white url(../images/zipcode_bg.png) 18px 10px no-repeat;
@@ -7746,7 +7837,10 @@ width: 100%;
 }
 
 #submit {
-
+position: absolute;
+top: 0;
+left: 516px;
+width: 100px;
 background: #70351C;
   border: 1px solid #550F0F;
   padding: 14px 20px 16px;

@@ -37,7 +37,8 @@ $(function () {
 
       this.windowObject = window;
       
-      $(this.windowObject).scroll(_.throttle(this.onScroll, SCROLL_THROTTLE));
+      $(this.windowObject)
+        .scroll(_.throttle(this.onScroll, SCROLL_THROTTLE));
     
       this._setScrollTop();    
     },
@@ -87,7 +88,10 @@ $(function () {
 
       this.max = this.$el.position().top - WATER_TOP_OFFSET;
       this.min = this.$el.position().top;
-      this.parentOffset = $('#cityscape').offset().top;
+
+
+      this.start = this.$el.position().top;
+      this.checkPosition();
     },
     
     onScroll : function () {
@@ -95,7 +99,17 @@ $(function () {
       
       if (this.scrollingDown) {
         if (this.scrollTop > WATER_VIEW_START) {
-          offset = offset > this.max ? offset * WATER_VIEW_INCREMENT : this.max;
+          offset = this.start - (this.scrollTop - WATER_VIEW_START);
+
+          offset = offset < this.max ? this.max : offset;
+
+          this.$el.css('top', offset);
+        }
+      } else {
+        if (this.scrollTop > WATER_VIEW_START) {
+          offset = this.start - (this.scrollTop - WATER_VIEW_START);
+
+          offset = offset > this.start ? this.start : offset;
 
           this.$el.css('top', offset);
         }
@@ -139,11 +153,13 @@ $(function () {
       this.id     = this.$el.attr('id');
       this.height = $('#price').height();
       this.offset = $('#price').offset().top;
-      
-      this.onResize();
-      
+      this.helper = this.$('.animating-tag:first');
+      this.tag    = this.$('.fixed-tag:first');
+      this.start  = parseInt(this.tag.text(), 10);
+
       $(window).resize(this.onResize);
 
+      this.onResize();
       this.setPrices();
     },
 
@@ -161,10 +177,6 @@ $(function () {
         
     checkPosition : function () {
       this.scrollTop = this.model.get('scrollTop');
-      
-      var scrollingDown = this.scrollTop > this.oldScrollTop;
-
-      this.oldScrollTop = this.scrollTop;
           
       if (this.scrollTop + this.windowHeight < this.offset || this.scrollTop > this.offset + this.height) {
         return false;
@@ -174,21 +186,15 @@ $(function () {
     },
     
     animateUp : function () {
-      var newVal = parseInt(this.$el.text(), 10) + 1,
-          template;
+      this.start += 1;
       
-      newVal = newVal > 9 ? 1 : newVal;
+      this.start = this.start > 9 ? 1 : this.start;
       
-      template = $('<div class="tag animated">' + newVal + '</div>').css({
-        top: this.$el.height(),
-        left: this.$el.position().left
-      });
-      
-      this.$el.after(template);
-      
-      template.animate({top: 0}, TAG_ANIMATION_SPEED, _.bind(function () {
-        this.$el.text(newVal);
-        template.remove();
+      this.helper.text(this.start);
+
+      this.helper.animate({top: 0}, TAG_ANIMATION_SPEED, _.bind(function () {
+        this.tag.text(this.start);
+        this.helper.css('top', '100%');
       }, this));
     }
   });
