@@ -11,8 +11,15 @@ $(function () {
       WarmingState,
       AnimationState,
       EffectView,
-      checkforMobile = function () {
-        return $(window).width() < 768;
+      checkforMobile = function mobile_detect() {
+      var isMobile = (/iphone|ipod|android|blackberry|opera mini|opera mobi|skyfire|maemo|windows phone|palm|iemobile|symbian|symbianos|fennec/i.test(navigator.userAgent.toLowerCase())),
+      isTablet = (/ipad|android 3|sch-i800|playbook|tablet|kindle|gt-p1000|sgh-t849|shw-m180s|a510|a511|a100|dell streak|silk/i.test(navigator.userAgent.toLowerCase()));
+
+        if (isMobile || isTablet) {
+          return true;
+        } else {
+          return false;
+        }
       },
       SCROLL_THROTTLE = 10,
       WATER_TOP_OFFSET = 800,
