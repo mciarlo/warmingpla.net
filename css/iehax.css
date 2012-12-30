@@ -34,13 +34,13 @@
 }
 
 .virus.large {
-	background-position: -56px -82px;
+	background-position: -56px -220px;
 	width: 128px;
 	height: 78px;
 }
 
 .virus.xlarge {
-	background-position: -56px -220px;
+	background-position: -56px -82px;
 	width: 148px;
 	height: 138px;
 }
@@ -82,13 +82,13 @@
 	}
 
 	.virus.large {
-		background-position: -56px -82px;
+		background-position: -56px -220px;
 		width: 128px;
 		height: 78px;
 	}
 
 	.virus.xlarge {
-		background-position: -56px -220px;
+		background-position: -56px -82px;
 		width: 148px;
 		height: 138px;
 	}
