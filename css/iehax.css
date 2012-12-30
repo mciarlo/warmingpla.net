@@ -1,7 +1,12 @@
-.bacteria.short {
+.bacteria {
 	background: transparent url(../images/cells.png) 0 0 no-repeat;
+	border: none;
+}
+
+.bacteria.short {
+	background-position: top left;
 }
 
 .bacteria.long {
-	background: transparent url(../images/cells.png) bottom left no-repeat;
+	background-position: bottom left;
 }
