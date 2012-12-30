@@ -60,7 +60,7 @@
 
 	.bacteria.long {
 		height: 278px;
-		background-position: bottom left;
+		background-position: -28px 0;
 	}
 
 	.virus {
@@ -70,18 +70,26 @@
 	}
 
 	.virus.small {
-		background-position: 0 -56px;
+		background-position: -56px 0;
+		width: 28px;
+		height: 26px;
 	}
 
 	.virus.medium {
-		background-position: -26px -56px;
+		background-position: -56px -26px;
+		width: 78px;
+		height: 56px;
 	}
 
 	.virus.large {
-		background-position: -82px -56px;
+		background-position: -56px -82px;
+		width: 128px;
+		height: 78px;
 	}
 
 	.virus.xlarge {
-		background-position: -220px -56px;
+		background-position: -56px -220px;
+		width: 148px;
+		height: 138px;
 	}
 }
