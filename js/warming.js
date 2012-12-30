@@ -15,6 +15,7 @@ $(function () {
           return true;
         }
       },
+      IS_WIDE = $(window).width() < 768,
       IS_DESKTOP_CAPABLE = checkforMobile(),
       SCROLL_THROTTLE = 10,
       WATER_TOP_OFFSET = 600,
@@ -278,7 +279,7 @@ $(function () {
             '#cityscape'  : 7180
           };
         
-        offset = !IS_DESKTOP_CAPABLE ? offsetValuesMobile[href] : offsetValuesDefault[href]
+        offset = !IS_WIDE ? offsetValuesMobile[href] : offsetValuesDefault[href]
         
         $('body').animate({scrollTop : offset}, SCROLL_SPEED);
       }
