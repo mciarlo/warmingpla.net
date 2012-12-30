@@ -1,12 +1,33 @@
 .bacteria {
 	background: transparent url(../images/cells.png) 0 0 no-repeat;
 	border: none;
+	width: 28px;
 }
 
 .bacteria.short {
+	height: 128px;
 	background-position: top left;
 }
 
 .bacteria.long {
+	height: 278px;
 	background-position: bottom left;
+}
+
+@media screen and (min-width: 768px) {
+	.bacteria {
+		background: transparent url(../images/cells.png) 0 0 no-repeat;
+		border: none;
+		width: 28px;
+	}
+
+	.bacteria.short {
+		height: 128px;
+		background-position: top left;
+	}
+
+	.bacteria.long {
+		height: 278px;
+		background-position: bottom left;
+	}
 }
