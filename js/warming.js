@@ -144,7 +144,15 @@ $(function () {
       
       $(window).resize(this.onResize);
 
-      this
+      this.setPrices();
+    },
+
+    setPrices : function () {
+      if (this.checkPosition()) {
+        this.animateUp();
+      }
+
+      _.delay(this.setPrices, this.options.rate);
     },
     
     onResize : function () {
@@ -159,14 +167,10 @@ $(function () {
       this.oldScrollTop = this.scrollTop;
           
       if (this.scrollTop + this.windowHeight < this.offset || this.scrollTop > this.offset + this.height) {
-        return;
+        return false;
       }
-      
-      if (scrollingDown) {   
-        this.animateUp();
-      } else {
-        this.animateDown();
-      }
+
+      return true;
     },
     
     animateUp : function () {
@@ -181,25 +185,6 @@ $(function () {
       });
       
       this.$el.after(template);
-      
-      template.animate({top: 0}, TAG_ANIMATION_SPEED, _.bind(function () {
-        this.$el.text(newVal);
-        template.remove();
-      }, this));
-    },
-    
-    animateDown : function () {
-      var newVal = parseInt(this.$el.text(), 10) - 1,
-          template;
-      
-      newVal = newVal < 1 ? 9 : newVal;
-      
-      template = $('<div class="tag animated">' + newVal + '</div>').css({
-        top: - this.$el.height(),
-        left: this.$el.position().left
-      });
-       
-      this.$el.before(template);
       
       template.animate({top: 0}, TAG_ANIMATION_SPEED, _.bind(function () {
         this.$el.text(newVal);
@@ -314,25 +299,25 @@ $(function () {
         
     new TagView({
       el : $('#tag1'),
-      rate : 1000,
+      rate : 10000,
       model : warmingState
     });
     
     new TagView({
       el : $('#tag2'),
-      rate:  500,
+      rate:  5000,
       model : warmingState
     });
     
     new TagView({
       el : $('#tag3'),
-      rate : 200,
+      rate : 1000,
       model : warmingState
     });
     
     new TagView({
       el : $('#tag4'),
-      rate : 50,
+      rate : 200,
       model : warmingState
     });
 
