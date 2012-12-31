@@ -129,11 +129,11 @@ ul li {
   text-align: center;
   color: white;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: .87em;
   color: #7F91A5;
-  letter-spacing: 5px;
+  letter-spacing: .5em;
   line-height: 1.5;
-  margin-bottom: 2em;
+  margin-bottom: .6em;
 }
 
 #blue-sky .reflow {
@@ -145,10 +145,9 @@ ul li {
   width: 90%;
   text-align: center;
   font-size: 3em;
-  padding: 25px 0 25px 0;
+  padding: 0px 0 25px 0;
   font-weight: normal;
   border-bottom: 5px solid #8591a2;
-  border-top: 5px solid #8591a2;
   text-transform: uppercase;
   color: white;
   z-index: 10;
@@ -250,7 +249,7 @@ ul li {
 
 #instructions strong {
   color: white;
-  font-size: 1.8em;
+  font-size: 1.3em;
   display: block;
   margin-top: .2em;
   font-weight: normal;
@@ -3075,13 +3074,12 @@ ul li {
 }
 
 #prevention-heading {
-  font-size: 3em;
   color: white;
   text-align: center;
   text-transform: uppercase;
   width: 100%;
   text-align: center;
-  font-size: 3.6em;
+  font-size: 3em;
   padding: 0 0 .3em 0;
   font-weight: normal;
   z-index: 10;
@@ -3092,36 +3090,84 @@ ul li {
 }
 
 #prevention-heading span {
-  font-size: .3em;
+  font-size: .2em;
   display: block;
   letter-spacing: 1em;
   margin-bottom: .4em;
 }
 
+#prevention-steps .icon {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  background: transparent url(../images/prevent_icons.png) 0 0 no-repeat;
+  margin-left: -23px;
+}
+
+#recycle .icon {
+  background-position: 0 0;
+}
+
+#travel .icon {
+  background-position: -45px 0;
+}
+
+#organic .icon {
+  background-position: -90px 0;
+}
+
+#lights .icon {
+  background-position: 0 -45px;
+}
+
+#clf .icon {
+  background-position: -45px -45px;
+}
+
+#smarter .icon {
+  background-position: -90px -45px;
+}
+
+#filters .icon {
+  background-position: 0 -90px;
+}
+
+#tree .icon {
+  background-position: -45px -90px;
+}
+
+#voice .icon {
+  background-position: -90px -90px;
+}
+
 #prevention-steps p {
   display: block;
-  color: white;
+  color: #798aa2;
   text-align: center;
-  font-size: 1.6em;
+  font-size: 1.4em;
   line-height: 1.4;
   font-family: Trebuchet MS, sans-serif;
-  margin-bottom: 2em;
+  margin-bottom: 2.2em;
 }
 
 #prevention-steps li {
-  float: left;
-  display: inline-block;
-  width: 31%;
-  margin-right: 2%;
+  text-align: center;
+  display: block;
+  width: 80%;
+  margin: 0 auto 3em auto;
   color: #798aa2;
-  height: 110px;
   font-family: Trebuchet MS, sans-serif;
   line-height: 1.4;
+  position: relative;
+  padding-top: 55px;
 }
 
 #prevention-steps strong {
   display: block;
-  color: white;
+  font-size: 1.2em;
+  color: #798aa2;
 }
 
 /* Take Action --------------------------------------*/
@@ -3165,9 +3211,10 @@ ul li {
 
 #action-heading span {
   display: block;
-  font-size: .25em;
-  letter-spacing: 10px;
+  font-size: .3em;
+  letter-spacing: 1.5em;
   color: #697681;
+  margin-bottom: .4em;
 }
 
 .instructions {
@@ -3241,6 +3288,23 @@ ul li {
 #submit:hover {
   color: white;
   background: #86300B;
+}
+
+#social {
+  float: left;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.fb-like,
+iframe,
+#social div {
+  float:left;
+}
+
+.fb_like {
+  margin-top: -1px;
 }
 
 /* #footer -----------------------------------*/
@@ -3346,10 +3410,6 @@ ul li {
     padding: 10px 0px 10px 45px;
   }
 
-  #blue-sky p {
-    margin-bottom: .5em;
-  }
-
   #blue-sky .reflow {
     display: inline;
   }
@@ -3386,6 +3446,10 @@ ul li {
     border-right: none;
   }
 
+  #instructions strong {
+    font-size: 1.6em;
+  }
+
   .effect-label {
     display: none;
   }
@@ -3411,11 +3475,6 @@ ul li {
     background-position: -170px 0;
   }
 
-  #start-btn:hover {
-    background: white;
-    color: rgb(70,94,127);
-  }
-
   #wrapper {
     width: 768px;
     margin: 0 auto 0 auto;
@@ -3426,9 +3485,10 @@ ul li {
     text-align: center;
     color: white;
     text-transform: uppercase;
-    font-size: 11px;
     color: #7F91A5;
-    letter-spacing: 5px;
+    letter-spacing: .5em;
+    margin-bottom: .5em;
+    font-size: 1em;
   }
 
   #cloudscape {
@@ -5216,11 +5276,42 @@ ul li {
     background-position: -713px -320px;
   }
 
-  /* Take Action ----------------------------*/
+  /* Prevention ----------------------------*/
+  #prevention-heading {
+    font-size: 3.6em;
+  }
 
+  #prevention-heading span {
+    font-size: .3em;
+  }
+
+  #prevention-steps li {
+    float: left;
+    text-align: center;
+    display: inline-block;
+    width: 31%;
+    margin-right: 3.5%;
+    color: #798aa2;
+    height: 110px;
+    font-family: Trebuchet MS, sans-serif;
+    line-height: 1.4;
+    margin-bottom: 1em;
+    position: relative;
+    padding-top: 55px;
+  }
+
+  #prevention-steps li:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  /* Take Action ----------------------------*/
   #take-action {
     padding: 50px 50px 60px 50px;
     z-index: 15;
+  }
+
+  #action-heading span {
+    font-size: .2em;
   }
 
   #template {
