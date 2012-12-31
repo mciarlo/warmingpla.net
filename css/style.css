@@ -1334,7 +1334,6 @@ ul li {
 
 #petri-dish .effect-label {
   top: -300px;
-
 }
 
 .virus {
@@ -1345,7 +1344,6 @@ ul li {
   background: -o-radial-gradient(center, ellipse cover,  rgba(215,127,50,1) 0%,rgba(209,119,50,1) 14%,rgba(154,17,17,1) 53%,rgba(154,17,17,1) 100%);
   background: -ms-radial-gradient(center, ellipse cover,  rgba(215,127,50,1) 0%,rgba(209,119,50,1) 14%,rgba(154,17,17,1) 53%,rgba(154,17,17,1) 100%);
   background: radial-gradient(ellipse at center,  rgba(215,127,50,1) 0%,rgba(209,119,50,1) 14%,rgba(154,17,17,1) 53%,rgba(154,17,17,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d77f32', endColorstr='#9a1111',GradientType=1 );
   border: 4px solid #ae1313;
   position: absolute;
   border-radius: 80px 50px 70px 50px;
@@ -1360,7 +1358,6 @@ ul li {
   background: -o-radial-gradient(center, ellipse cover,  rgba(206,60,49,1) 0%,rgba(154,17,17,1) 53%,rgba(154,17,17,1) 100%);
   background: -ms-radial-gradient(center, ellipse cover,  rgba(206,60,49,1) 0%,rgba(154,17,17,1) 53%,rgba(154,17,17,1) 100%);
   background: radial-gradient(ellipse at center,  rgba(206,60,49,1) 0%,rgba(154,17,17,1) 53%,rgba(154,17,17,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ce3c31', endColorstr='#9a1111',GradientType=1 );
 }
 
 .virus.darker {
@@ -3361,6 +3358,7 @@ iframe,
 
 #heart img {
   width: 18px;
+  height: 18px;
   margin: 19px 0 0 18px;
   display: block;
 }

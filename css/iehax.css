@@ -15,10 +15,15 @@
 	background-position: -28px 0;
 }
 
-.virus {
+#petri-dish .virus {
 	background: transparent url(../images/cells.png) 0 0 no-repeat;
 	border: none;
 	filter: none;
+}
+
+#petri-dish .virus.dark,
+#petri-dish .virus.darker {
+	background-color: none;
 }
 
 .virus.small {
@@ -45,7 +50,411 @@
 	height: 138px;
 }
 
+#fish23 {
+  background: transparent url(../images/fish.png) 0 0 no-repeat;
+  width: 45px;
+  height: 43px;
+  filter: none;
+}
+
+#fish23 .tail,
+#fish23 .eye,
+#fish23 .top-fin,
+#fish23 .bottom-fin {
+  display: none;
+}
+
+#virus2 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9848077530122079, M12=-0.17364817766693127, M21=0.17364817766693127, M22=0.9848077530122079, SizingMethod='auto expand')";
+}
+
+#virus3 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.7660444431189778, M12=-0.6427876096865396, M21=0.6427876096865396, M22=0.7660444431189778, SizingMethod='auto expand')";
+}
+
+#virus4 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.34202014332566816, M12=-0.9396926207859085, M21=0.9396926207859085, M22=0.34202014332566816, SizingMethod='auto expand')";
+}
+
+#virus5 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9848077530122081, M12=0.17364817766692991, M21=-0.17364817766692991, M22=0.9848077530122081, SizingMethod='auto expand')";
+}
+
+#virus6 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9961946980917454, M12=0.08715574274765871, M21=-0.08715574274765871, M22=0.9961946980917454, SizingMethod='auto expand')";
+}
+
+#virus8 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.6427876096865385, M12=0.7660444431189788, M21=-0.7660444431189788, M22=-0.6427876096865385, SizingMethod='auto expand')";
+}
+
+#virus9 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865474, M12=-0.7071067811865477, M21=0.7071067811865477, M22=0.7071067811865474, SizingMethod='auto expand')";
+}
+
+#virus10 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9063077870366497, M12=-0.4226182617407, M21=0.4226182617407, M22=0.9063077870366497, SizingMethod='auto expand')";
+}
+
+#virus11 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.3907311284892735, M12=-0.9205048534524405, M21=0.9205048534524405, M22=0.3907311284892735, SizingMethod='auto expand')";
+}
+
+#virus12 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.19080899537654492, M12=0.981627183447664, M21=-0.981627183447664, M22=0.19080899537654492, SizingMethod='auto expand')";
+}
+
+#virus13 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9335804264972015, M12=-0.35836794954530077, M21=0.35836794954530077, M22=0.9335804264972015, SizingMethod='auto expand')";
+}
+
+#virus14 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865483, M12=0.7071067811865467, M21=-0.7071067811865467, M22=0.7071067811865483, SizingMethod='auto expand')";
+}
+
+#virus15 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9563047559630357, M12=-0.29237170472273627, M21=0.29237170472273627, M22=0.9563047559630357, SizingMethod='auto expand')";
+}
+
+#virus16 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9998476951563913, M12=-0.01745240643728445, M21=0.01745240643728445, M22=0.9998476951563913, SizingMethod='auto expand')";
+}
+
+#virus17 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.8571673007021123, M12=0.515038074910054, M21=-0.515038074910054, M22=0.8571673007021123, SizingMethod='auto expand')";
+}
+
+#virus18 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.5150380749100545, M12=-0.8571673007021121, M21=0.8571673007021121, M22=-0.5150380749100545, SizingMethod='auto expand')";
+}
+
+#virus19 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.9659258262890682, M12=0.258819045102521, M21=-0.258819045102521, M22=-0.9659258262890682, SizingMethod='auto expand')";
+}
+
+#virus20 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.8660254037844387, M12=0.49999999999999994, M21=-0.49999999999999994, M22=0.8660254037844387, SizingMethod='auto expand')";
+}
+
+#virus21 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9396926207859083, M12=0.34202014332566893, M21=-0.34202014332566893, M22=0.9396926207859083, SizingMethod='auto expand')";
+}
+
+#virus22 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9396926207859083, M12=0.34202014332566893, M21=-0.34202014332566893, M22=0.9396926207859083, SizingMethod='auto expand')";
+}
+
+#virus23 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.2588190451025201, M12=-0.9659258262890684, M21=0.9659258262890684, M22=0.2588190451025201, SizingMethod='auto expand')";
+}
+
+#virus24 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.8571673007021124, M12=-0.5150380749100539, M21=0.5150380749100539, M22=-0.8571673007021124, SizingMethod='auto expand')";
+}
+
+#virus25 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9816271834476639, M12=0.19080899537654505, M21=-0.19080899537654505, M22=0.9816271834476639, SizingMethod='auto expand')";
+}
+
+#virus26 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.8571673007021121, M12=-0.5150380749100545, M21=0.5150380749100545, M22=0.8571673007021121, SizingMethod='auto expand')";
+}
+
+#virus27 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865474, M12=-0.7071067811865477, M21=0.7071067811865477, M22=0.7071067811865474, SizingMethod='auto expand')";
+}
+
+#virus28 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.4226182617406987, M12=0.9063077870366503, M21=-0.9063077870366503, M22=-0.4226182617406987, SizingMethod='auto expand')";
+}
+
+#virus29 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.08715574274765814, M12=0.9961946980917455, M21=-0.9961946980917455, M22=0.08715574274765814, SizingMethod='auto expand')";
+}
+
+#virus30 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.9063077870366504, M12=-0.42261826174069866, M21=0.42261826174069866, M22=-0.9063077870366504, SizingMethod='auto expand')";
+}
+
+#virus31 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.5735764363510466, M12=-0.8191520442889915, M21=0.8191520442889915, M22=0.5735764363510466, SizingMethod='auto expand')";
+}
+
+#virus32 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9659258262890684, M12=0.25881904510252024, M21=-0.25881904510252024, M22=0.9659258262890684, SizingMethod='auto expand')";
+}
+
+#virus33 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.08715574274765776, M12=0.9961946980917455, M21=-0.9961946980917455, M22=-0.08715574274765776, SizingMethod='auto expand')";
+}
+
+#virus34 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.08715574274765776, M12=0.9961946980917455, M21=-0.9961946980917455, M22=-0.08715574274765776, SizingMethod='auto expand')";
+}
+
+#virus35 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.90630778703665, M12=0.42261826174069933, M21=-0.42261826174069933, M22=-0.90630778703665, SizingMethod='auto expand')";
+}
+
+#virus36 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.90630778703665, M12=0.42261826174069933, M21=-0.42261826174069933, M22=-0.90630778703665, SizingMethod='auto expand')";
+}
+
+#virus37 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.6560590289905075, M12=-0.7547095802227718, M21=0.7547095802227718, M22=-0.6560590289905075, SizingMethod='auto expand')";
+}
+
+#virus38 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.90630778703665, M12=0.42261826174069933, M21=-0.42261826174069933, M22=-0.90630778703665, SizingMethod='auto expand')";
+}
+
+#virus40 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.90630778703665, M12=0.42261826174069933, M21=-0.42261826174069933, M22=-0.90630778703665, SizingMethod='auto expand')";
+}
+
+#virus41 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.573576436351046, M12=-0.8191520442889918, M21=0.8191520442889918, M22=0.573576436351046, SizingMethod='auto expand')";
+}
+
+#virus42 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.2588190451025209, M12=-0.9659258262890682, M21=0.9659258262890682, M22=-0.2588190451025209, SizingMethod='auto expand')";
+}
+
+#virus43 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.8191520442889916, M12=-0.5735764363510465, M21=0.5735764363510465, M22=0.8191520442889916, SizingMethod='auto expand')";
+}
+
+#virus44 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.965925826289068, M12=-0.25881904510252185, M21=0.25881904510252185, M22=-0.965925826289068, SizingMethod='auto expand')";
+}
+
+#virus45 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.90630778703665, M12=0.42261826174069933, M21=-0.42261826174069933, M22=-0.90630778703665, SizingMethod='auto expand')";
+}
+
+#virus46 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9961946980917455, M12=-0.08715574274765832, M21=0.08715574274765832, M22=0.9961946980917455, SizingMethod='auto expand')";
+}
+
+#virus47 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.5735764363510465, M12=0.8191520442889915, M21=-0.8191520442889915, M22=0.5735764363510465, SizingMethod='auto expand')";
+}
+
+#virus48 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.4067366430758002, M12=0.9135454576426009, M21=-0.9135454576426009, M22=0.4067366430758002, SizingMethod='auto expand')";
+}
+
+#virus49 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.90630778703665, M12=0.42261826174069933, M21=-0.42261826174069933, M22=-0.90630778703665, SizingMethod='auto expand')";
+}
+
+#virus50 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.34202014332566805, M12=0.9396926207859086, M21=-0.9396926207859086, M22=-0.34202014332566805, SizingMethod='auto expand')";
+}
+
+#virus52 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.35836794954530027, M12=0.9335804264972017, M21=-0.9335804264972017, M22=-0.35836794954530027, SizingMethod='auto expand')";
+}
+
+#virus53 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.90630778703665, M12=0.42261826174069933, M21=-0.42261826174069933, M22=-0.90630778703665, SizingMethod='auto expand')";
+}
+
+#virus54 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.34202014332566805, M12=0.9396926207859086, M21=-0.9396926207859086, M22=-0.34202014332566805, SizingMethod='auto expand')";
+}
+
+#virus55 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.34202014332566805, M12=0.9396926207859086, M21=-0.9396926207859086, M22=-0.34202014332566805, SizingMethod='auto expand')";
+}
+
+#virus56 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.34202014332566805, M12=0.9396926207859086, M21=-0.9396926207859086, M22=-0.34202014332566805, SizingMethod='auto expand')";
+}
+
+#bacteria1 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9659258262890684, M12=0.25881904510252024, M21=-0.25881904510252024, M22=0.9659258262890684, SizingMethod='auto expand')";
+}
+
+#bacteria2 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865483, M12=0.7071067811865467, M21=-0.7071067811865467, M22=0.7071067811865483, SizingMethod='auto expand')";
+}
+
+#bacteria3 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9702957262759965, M12=-0.24192189559966787, M21=0.24192189559966787, M22=0.9702957262759965, SizingMethod='auto expand')";
+}
+
+#bacteria4 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.8480480961564262, M12=0.5299192642332047, M21=-0.5299192642332047, M22=0.8480480961564262, SizingMethod='auto expand')";
+}
+
+#bacteria5 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.9945218953682734, M12=-0.10452846326765305, M21=0.10452846326765305, M22=-0.9945218953682734, SizingMethod='auto expand')";
+}
+
+#bacteria6 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.37460659341591196, M12=0.9271838545667874, M21=-0.9271838545667874, M22=0.37460659341591196, SizingMethod='auto expand')";
+}
+
+#bacteria7 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9945218953682733, M12=-0.10452846326765342, M21=0.10452846326765342, M22=0.9945218953682733, SizingMethod='auto expand')";
+}
+
+#bacteria8 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.4848096202463365, M12=-0.8746197071393961, M21=0.8746197071393961, M22=0.4848096202463365, SizingMethod='auto expand')";
+}
+
+#bacteria9 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.17364817766693033, M12=-0.984807753012208, M21=0.984807753012208, M22=-0.17364817766693033, SizingMethod='auto expand')";
+}
+
+#bacteria10 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9455185755993168, M12=0.32556815445715664, M21=-0.32556815445715664, M22=0.9455185755993168, SizingMethod='auto expand')";  
+}
+
+#bacteria11 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.7771459614569709, M12=0.6293203910498374, M21=-0.6293203910498374, M22=0.7771459614569709, SizingMethod='auto expand')";
+}
+
+#bacteria12 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9743700647852351, M12=-0.22495105434386534, M21=0.22495105434386534, M22=0.9743700647852351, SizingMethod='auto expand')";
+}
+
+#bacteria13 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9455185755993168, M12=0.32556815445715664, M21=-0.32556815445715664, M22=0.9455185755993168, SizingMethod='auto expand')";
+}
+
+#bacteria14 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.15643446504023067, M12=-0.9876883405951378, M21=0.9876883405951378, M22=0.15643446504023067, SizingMethod='auto expand')";
+}
+
+#bacteria15 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.4848096202463365, M12=-0.8746197071393961, M21=0.8746197071393961, M22=0.4848096202463365, SizingMethod='auto expand')";
+}
+
+#bacteria16 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.7193398003386511, M12=-0.6946583704589974, M21=0.6946583704589974, M22=-0.7193398003386511, SizingMethod='auto expand')";
+}
+
+#bacteria17 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.4539904997395467, M12=0.8910065241883679, M21=-0.8910065241883679, M22=-0.4539904997395467, SizingMethod='auto expand')";
+}
+
+#bacteria18 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.6293203910498373, M12=0.777145961456971, M21=-0.777145961456971, M22=-0.6293203910498373, SizingMethod='auto expand')";
+}
+
+#bacteria19 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.484809620246337, M12=0.8746197071393959, M21=-0.8746197071393959, M22=-0.484809620246337, SizingMethod='auto expand')";
+}
+
+#bacteria20 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9902680687415705, M12=0.13917310096006452, M21=-0.13917310096006452, M22=0.9902680687415705, SizingMethod='auto expand')";
+}
+
+#bacteria21 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.4848096202463365, M12=-0.8746197071393961, M21=0.8746197071393961, M22=0.4848096202463365, SizingMethod='auto expand')";
+}
+
+#bacteria22 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.3907311284892731, M12=0.9205048534524406, M21=-0.9205048534524406, M22=0.3907311284892731, SizingMethod='auto expand')";
+}
+
+#bacteria23 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.40673664307580043, M12=0.9135454576426008, M21=-0.9135454576426008, M22=-0.40673664307580043, SizingMethod='auto expand')";
+}
+
+#bacteria24 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.40673664307580043, M12=0.9135454576426008, M21=-0.9135454576426008, M22=-0.40673664307580043, SizingMethod='auto expand')";
+}
+
+#bacteria25 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.27563735581699983, M12=0.9612616959383187, M21=-0.9612616959383187, M22=0.27563735581699983, SizingMethod='auto expand')";
+}
+
+#bacteria26 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.9945218953682733, M12=0.10452846326765443, M21=-0.10452846326765443, M22=-0.9945218953682733, SizingMethod='auto expand')"; 
+}
+
+#bacteria27 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.3255681544571569, M12=-0.9455185755993167, M21=0.9455185755993167, M22=0.3255681544571569, SizingMethod='auto expand')";
+}
+
+#bacteria28 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9945218953682732, M12=-0.10452846326765454, M21=0.10452846326765454, M22=0.9945218953682732, SizingMethod='auto expand')";  
+}
+
+#bacteria29 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.1564344650402304, M12=-0.9876883405951378, M21=0.9876883405951378, M22=-0.1564344650402304, SizingMethod='auto expand')";
+}
+
+#bacteria30 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.30901699437494773, M12=0.9510565162951535, M21=-0.9510565162951535, M22=0.30901699437494773, SizingMethod='auto expand')";
+}
+
+#bacteria31 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.08715574274765825, M12=-0.9961946980917455, M21=0.9961946980917455, M22=-0.08715574274765825, SizingMethod='auto expand')";
+}
+
+#bacteria32 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9848077530122079, M12=-0.17364817766693127, M21=0.17364817766693127, M22=0.9848077530122079, SizingMethod='auto expand')";
+}
+
+#bacteria33 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.13917310096006444, M12=0.9902680687415705, M21=-0.9902680687415705, M22=-0.13917310096006444, SizingMethod='auto expand')";
+}
+
+#bacteria34 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9702957262759964, M12=0.24192189559966823, M21=-0.24192189559966823, M22=0.9702957262759964, SizingMethod='auto expand')"; 
+}
+
+#bacteria35 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.19080899537654397, M12=-0.9816271834476641, M21=0.9816271834476641, M22=-0.19080899537654397, SizingMethod='auto expand')";
+}
+
+#bacteria36 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9848077530122081, M12=0.17364817766692991, M21=-0.17364817766692991, M22=0.9848077530122081, SizingMethod='auto expand')";
+}
+
+#bacteria37 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.08715574274765926, M12=0.9961946980917454, M21=-0.9961946980917454, M22=0.08715574274765926, SizingMethod='auto expand')";
+}
+
+#bacteria38 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.0697564737441257, M12=0.9975640502598242, M21=-0.9975640502598242, M22=0.0697564737441257, SizingMethod='auto expand')";
+}
+
+#bacteria39 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.12186934340514756, M12=0.992546151641322, M21=-0.992546151641322, M22=-0.12186934340514756, SizingMethod='auto expand')";
+}
+
+#bacteria40 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.3090169943749471, M12=0.9510565162951536, M21=-0.9510565162951536, M22=-0.3090169943749471, SizingMethod='auto expand')";
+}
+
+#bacteria41 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.9743700647852351, M12=0.22495105434386545, M21=-0.22495105434386545, M22=-0.9743700647852351, SizingMethod='auto expand')";
+}
+
+#bacteria42 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.4539904997395472, M12=-0.8910065241883677, M21=0.8910065241883677, M22=0.4539904997395472, SizingMethod='auto expand')";
+}
+
+#bacteria43 {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.2923717047227373, M12=-0.9563047559630353, M21=0.9563047559630353, M22=0.2923717047227373, SizingMethod='auto expand')";
+}
+
+
 @media screen and (min-width: 768px) {
+  #cloudscape {
+    height: 2300px;
+  } 
+  
+  #submit {
+    top: 2px;
+    padding-top: 15px;
+  }
+
 	.bacteria {
 		background: transparent url(../images/cells.png) 0 0 no-repeat;
 		border: none;
@@ -63,11 +472,16 @@
 		background-position: -28px 0;
 	}
 
-	.virus {
+	#petri-dish .virus {
 		background: transparent url(../images/cells.png) 0 0 no-repeat;
 		border: none;
 		filter: none;
 	}
+	
+	#petri-dish .virus.dark,
+  #petri-dish .virus.darker {
+  	background-color: none;
+  }
 
 	.virus.small {
 		background-position: -56px 0;
