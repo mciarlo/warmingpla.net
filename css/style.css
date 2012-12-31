@@ -772,7 +772,7 @@ ul li {
 }
 
 #building2 .perspective-wall {
-  height: 485px
+  height: 470px;
 }
 
 .antenna {
@@ -1148,14 +1148,14 @@ ul li {
   width: 215px;
   height: 309px;
   top: 375px;
-  left: -55px;
+  left: -75px;
 }
 
 #rock2 {
   width: 242px;
   height: 292px;
   top: 420px;
-  right: -80px;
+  right: -100px;
   background-position: top right;
 }
 
@@ -3059,7 +3059,7 @@ ul li {
 /* Prevention ------------------------------------*/
 #prevention-steps {
   background: rgb(32,44,65);
-  padding: 0 50px 45px 50px;
+  padding: 0 25px 45px 25px;
   position: relative;
   z-index: 20;
 }
@@ -3152,7 +3152,7 @@ ul li {
 #prevention-steps li {
   text-align: center;
   display: block;
-  width: 80%;
+  width: 90%;
   margin: 0 auto 3em auto;
   color: #798aa2;
   font-family: Trebuchet MS, sans-serif;
@@ -3297,7 +3297,7 @@ ul li {
 .fb-like,
 iframe,
 #social div {
-  float:left;
+  float:left !important;
 }
 
 .fb_like {
