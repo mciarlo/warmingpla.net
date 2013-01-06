@@ -124,8 +124,7 @@ margin-left: 1px;
 
 #virus10 {
    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9063077870366497, M12=-0.4226182617407, M21=0.4226182617407, M22=0.9063077870366497, SizingMethod='auto expand')";
-   margin-left: -6px; 
-   margin-top: -9px;
+   margin: -30px 0 0 0;
 }
 
 #virus11 {
@@ -219,20 +218,22 @@ margin-left: 1px;
 
 #virus28 {
    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.4226182617406987, M12=0.9063077870366503, M21=-0.9063077870366503, M22=-0.4226182617406987, SizingMethod='auto expand')";
+   margin-top: -20px;
 }
 
 #virus29 {
    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.08715574274765814, M12=0.9961946980917455, M21=-0.9961946980917455, M22=0.08715574274765814, SizingMethod='auto expand')";
+   margin-top: -15px;
 }
 
 #virus30 {
    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.9063077870366504, M12=-0.42261826174069866, M21=0.42261826174069866, M22=-0.9063077870366504, SizingMethod='auto expand')";
+   margin-top: -30px;
 }
 
 #virus31 {
    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.5735764363510466, M12=-0.8191520442889915, M21=0.8191520442889915, M22=0.5735764363510466, SizingMethod='auto expand')";
-   margin-left: -6px; 
-   margin-top: -11px;
+   margin: 0 0 0 -30px; 
 }
 
 #virus32 {
@@ -304,14 +305,17 @@ margin-left: 1px;
 
 #virus48 {
    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.4067366430758002, M12=0.9135454576426009, M21=-0.9135454576426009, M22=0.4067366430758002, SizingMethod='auto expand')";
+   margin: -30px 0 0 10px;
 }
 
 #virus49 {
    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.90630778703665, M12=0.42261826174069933, M21=-0.42261826174069933, M22=-0.90630778703665, SizingMethod='auto expand')";
+   margin-top: -15px;
 }
 
 #virus50 {
    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.34202014332566805, M12=0.9396926207859086, M21=-0.9396926207859086, M22=-0.34202014332566805, SizingMethod='auto expand')";
+   margin-top: -36px;
 }
 
 #virus52 {
@@ -320,6 +324,7 @@ margin-left: 1px;
 
 #virus53 {
    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.90630778703665, M12=0.42261826174069933, M21=-0.42261826174069933, M22=-0.90630778703665, SizingMethod='auto expand')";
+   margin-top: -30px;
 }
 
 #virus54 {
@@ -363,22 +368,23 @@ margin-left: 1px;
 }
 
 #bacteria8 {
-  margin: 50px 25px 0 0;
+  margin: 20px 30px 0 0;
    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.4848096202463365, M12=-0.8746197071393961, M21=0.8746197071393961, M22=0.4848096202463365, SizingMethod='auto expand')";
 }
 
 #bacteria9 {
-  margin-top: -30px;
+  margin: 35px 0 0 0;
    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.17364817766693033, M12=-0.984807753012208, M21=0.984807753012208, M22=-0.17364817766693033, SizingMethod='auto expand')";
 }
 
 #bacteria10 {
-   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9455185755993168, M12=0.32556815445715664, M21=-0.32556815445715664, M22=0.9455185755993168, SizingMethod='auto expand')";  
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9455185755993168, M12=0.32556815445715664, M21=-0.32556815445715664, M22=0.9455185755993168, SizingMethod='auto expand')"; 
+   margin: 0 40px 0 0; 
 }
 
 #bacteria11 {
    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.7771459614569709, M12=0.6293203910498374, M21=-0.6293203910498374, M22=0.7771459614569709, SizingMethod='auto expand')";
-   margin-left: -50px;
+   margin-right: 50px;
    margin-top: 30px;
 }
 
@@ -388,24 +394,27 @@ margin-left: 1px;
 
 #bacteria13 {
    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9455185755993168, M12=0.32556815445715664, M21=-0.32556815445715664, M22=0.9455185755993168, SizingMethod='auto expand')";
+   margin: -10px 0 0 0;
 }
 
 #bacteria14 {
    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.15643446504023067, M12=-0.9876883405951378, M21=0.9876883405951378, M22=0.15643446504023067, SizingMethod='auto expand')";
+   margin: 30px 40px 0 0;
 }
 
 #bacteria15 {
    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.4848096202463365, M12=-0.8746197071393961, M21=0.8746197071393961, M22=0.4848096202463365, SizingMethod='auto expand')";
+   margin: 40px 50px 0 0;
 }
 
 #bacteria16 {
    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.7193398003386511, M12=-0.6946583704589974, M21=0.6946583704589974, M22=-0.7193398003386511, SizingMethod='auto expand')";
-  margin-left: -25px;
-  margin-top: -20px;
+  margin: 10px 50px 0 0;
 }
 
 #bacteria17 {
    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.4539904997395467, M12=0.8910065241883679, M21=-0.8910065241883679, M22=-0.4539904997395467, SizingMethod='auto expand')";
+   margin: 60px 120px 0 0;
 }
 
 #bacteria18 {
@@ -413,6 +422,7 @@ margin-left: 1px;
 }
 
 #bacteria19 {
+   margin: 55px 120px 0 0;
    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.484809620246337, M12=0.8746197071393959, M21=-0.8746197071393959, M22=-0.484809620246337, SizingMethod='auto expand')";
 }
 
@@ -422,10 +432,12 @@ margin-left: 1px;
 
 #bacteria21 {
    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.4848096202463365, M12=-0.8746197071393961, M21=0.8746197071393961, M22=0.4848096202463365, SizingMethod='auto expand')";
+   margin: 20px 60px 0 0;
 }
 
 #bacteria22 {
    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.3907311284892731, M12=0.9205048534524406, M21=-0.9205048534524406, M22=0.3907311284892731, SizingMethod='auto expand')";
+   margin: 35px 40px 0 0;
 }
 
 #bacteria23 {
@@ -434,11 +446,13 @@ margin-left: 1px;
 
 #bacteria24 {
    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.40673664307580043, M12=0.9135454576426008, M21=-0.9135454576426008, M22=-0.40673664307580043, SizingMethod='auto expand')";
+   margin: 30px 40px 0 0;
 }
 
 #bacteria25 {
   margin-top: 40px;
    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.27563735581699983, M12=0.9612616959383187, M21=-0.9612616959383187, M22=0.27563735581699983, SizingMethod='auto expand')";
+   margin: 80px 60px 0 0;
 }
 
 #bacteria26 {
@@ -447,6 +461,7 @@ margin-left: 1px;
 
 #bacteria27 {
    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.3255681544571569, M12=-0.9455185755993167, M21=0.9455185755993167, M22=0.3255681544571569, SizingMethod='auto expand')";
+   margin: 30px 40px 0 0;
 }
 
 #bacteria28 {
@@ -455,14 +470,17 @@ margin-left: 1px;
 
 #bacteria29 {
    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.1564344650402304, M12=-0.9876883405951378, M21=0.9876883405951378, M22=-0.1564344650402304, SizingMethod='auto expand')";
+   margin: 40px 60px 0 0;
 }
 
 #bacteria30 {
    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.30901699437494773, M12=0.9510565162951535, M21=-0.9510565162951535, M22=0.30901699437494773, SizingMethod='auto expand')";
+   margin: 110px 90px 0 0;
 }
 
 #bacteria31 {
    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.08715574274765825, M12=-0.9961946980917455, M21=0.9961946980917455, M22=-0.08715574274765825, SizingMethod='auto expand')";
+   margin: 110px 130px 0 0;
 }
 
 #bacteria32 {
@@ -471,22 +489,27 @@ margin-left: 1px;
 
 #bacteria33 {
    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.13917310096006444, M12=0.9902680687415705, M21=-0.9902680687415705, M22=-0.13917310096006444, SizingMethod='auto expand')";
+  margin: 40px 40px 0 0;
 }
 
 #bacteria34 {
-   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9702957262759964, M12=0.24192189559966823, M21=-0.24192189559966823, M22=0.9702957262759964, SizingMethod='auto expand')"; 
+   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9702957262759964, M12=0.24192189559966823, M21=-0.24192189559966823, M22=0.9702957262759964, SizingMethod='auto expand')";
+   margin-right: 22px;
 }
 
 #bacteria35 {
    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.19080899537654397, M12=-0.9816271834476641, M21=0.9816271834476641, M22=-0.19080899537654397, SizingMethod='auto expand')";
+   margin: 120px 120px 0 0;
 }
 
 #bacteria36 {
    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9848077530122081, M12=0.17364817766692991, M21=-0.17364817766692991, M22=0.9848077530122081, SizingMethod='auto expand')";
+   margin: 45px 30px 0 0;
 }
 
 #bacteria37 {
    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.08715574274765926, M12=0.9961946980917454, M21=-0.9961946980917454, M22=0.08715574274765926, SizingMethod='auto expand')";
+  margin-top: 80px;
 }
 
 #bacteria38 {
@@ -495,10 +518,12 @@ margin-left: 1px;
 
 #bacteria39 {
    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.12186934340514756, M12=0.992546151641322, M21=-0.992546151641322, M22=-0.12186934340514756, SizingMethod='auto expand')";
+  margin: 45px 30px 0 0;
 }
 
 #bacteria40 {
    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-0.3090169943749471, M12=0.9510565162951536, M21=-0.9510565162951536, M22=-0.3090169943749471, SizingMethod='auto expand')";
+   margin: 35px 30px 0 0;
 }
 
 #bacteria41 {
@@ -555,6 +580,14 @@ margin-left: 1px;
 
 #sale-tag {
    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.9961946980917454, M12=0.08715574274765871, M21=-0.08715574274765871, M22=0.9961946980917454, SizingMethod='auto expand')";
+}
+
+#zipcode {
+  color: #aaa;
+}
+
+#zipcode.active {
+  color: #444;
 }
 
 @media screen and (min-width: 768px) {

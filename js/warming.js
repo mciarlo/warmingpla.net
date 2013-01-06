@@ -203,7 +203,11 @@ $(function () {
   });
   
   $(document).ready(function () {    
-    var warmingState = new WarmingState();
+    var warmingState = new WarmingState(),
+        hasPlaceholder = function () {
+            var testInput = document.createElement('input');
+            return ('placeholder' in testInput);
+        };
         
     warmingState.on('change', function () {
       var scrollTop = warmingState.get('scrollTop'),
@@ -246,6 +250,23 @@ $(function () {
       }
     });
     
+    if (!hasPlaceholder()) {
+      var PLACEHOLDER_TEXT = 'Enter your zip';
+      
+      $('#zipcode').val(PLACEHOLDER_TEXT).focus(function () {
+        var val = $(this).val();
+
+        if (val.length === 0 || val === PLACEHOLDER_TEXT) {
+          $(this).addClass('active').val('').focus();
+        }
+      }).blur(function () {
+        var val = $(this).val();
+        
+        if (val.length === 0) {
+          $(this).val(PLACEHOLDER_TEXT).removeClass();
+        }
+      });
+    }
       
     $('#toolbar a').click(function (ev) {
       ev.preventDefault();
