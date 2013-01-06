@@ -514,6 +514,7 @@ margin-left: 1px;
 
 #bacteria38 {
    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.0697564737441257, M12=0.9975640502598242, M21=-0.9975640502598242, M22=0.0697564737441257, SizingMethod='auto expand')";
+   margin: 45px 0 0 0;
 }
 
 #bacteria39 {
@@ -592,7 +593,7 @@ margin-left: 1px;
 
 @media screen and (min-width: 768px) {
   #instructions li {
-    width: 28.6%;
+    width: 26.6%;
   }
   
   #cloudscape {
@@ -601,7 +602,7 @@ margin-left: 1px;
   
   #submit {
     top: 2px;
-    padding-top: 15px;
+    padding-top: 12px;
   }
 
 	.bacteria {

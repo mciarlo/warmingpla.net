@@ -133,7 +133,8 @@ ul li {
   color: #7F91A5;
   letter-spacing: 5px;
   line-height: 1.5;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
+  display: none;
 }
 
 #blue-sky .reflow {
@@ -145,10 +146,9 @@ ul li {
   width: 90%;
   text-align: center;
   font-size: 3em;
-  padding: 25px 0 25px 0;
+  padding: 100px 0 25px 0;
   font-weight: normal;
-  border-bottom: 5px solid #8591a2;
-  border-top: 5px solid #8591a2;
+  border-bottom: 3px solid #8591a2;
   text-transform: uppercase;
   color: white;
   z-index: 10;
@@ -240,7 +240,7 @@ ul li {
   padding: 100px 15% 30px 15%;
   text-align: center;
   color: #94A1B4;
-  font-size: 1.2em;
+  font-size: 1.1em;
   line-height: 1.4;
 }
 
@@ -250,7 +250,7 @@ ul li {
 
 #instructions strong {
   color: white;
-  font-size: 1.8em;
+  font-size: 1.4em;
   display: block;
   margin-top: .2em;
   font-weight: normal;
@@ -389,6 +389,42 @@ ul li {
 	height: 0;
 }
 
+#effects-intro {
+  padding-top: 60px;
+  color: white;
+  text-align: center;
+  font-size: 3em;
+  text-transform: uppercase;
+  z-index: 30;
+  font-weight: normal;
+  position: relative;
+  text-shadow: 0 -1px 0px #333;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#effects-intro span {
+  display: block;
+}
+
+#intro-effects {
+  font-size: .2em;
+  letter-spacing: 1em;
+  margin-left: 1em;
+}
+
+#effects-intro .rule {
+  display: inline-block;
+  border-top: 2px solid #777;
+  width: 25%;
+  margin: 3px 10px;
+}
+
+#intro-of {
+  font-size: .2em;
+  margin: .4em 0;
+}
+
 /* Clouds */
 .cloud {
   position: absolute;
@@ -477,7 +513,9 @@ ul li {
 #cloud4 {
   top: 72px;
   left: -29%;
-  -webkit-transform: scale(0.7);
+  transform: scale3d(0.7, 0.7, 1);
+  -webkit-transform: scale3d(0.7, 0.7, 1);
+  -moz-transform: scale3d(0.7, 0.7, 1);
 }
 
 #cloud5 {
@@ -498,7 +536,9 @@ ul li {
 #cloud8 {
   top: 20px;
   right: 43%;
-  -webkit-transform: scale(0.7);
+  transform: scale3d(0.7, 0.7, 1);
+  -webkit-transform: scale3d(0.7, 0.7, 1);
+  -moz-transform: scale3d(0.7, 0.7, 1);
 }
 
 #cloud9 {
@@ -534,7 +574,9 @@ ul li {
 #cloud15 {
   top: 360px;
   left: -12%;
-  -webkit-transform: scale(0.8);
+  transform: scale3d(0.8, 0.8, 1);
+  -webkit-transform: scale3d(0.8, 0.8, 1);
+  -moz-transform: scale3d(0.8, 0.8, 1);
 }
 
 #cloud16 {
@@ -543,59 +585,87 @@ ul li {
 }
 
 #cloud1 .lightning {
+  animation: 3000ms lightning linear infinite;
   -webkit-animation: 3000ms lightning linear infinite;
+  -moz-animation: 3000ms lightning linear infinite;
 }
 
 #cloud2 .lightning {
+  animation: 4000ms lightning linear infinite;
   -webkit-animation: 4000ms lightning linear infinite;
+  -moz-animation: 4000ms lightning linear infinite;
 }
 
 #cloud3 .lightning {
+  animation: 3200ms lightning linear infinite;
   -webkit-animation: 3200ms lightning linear infinite;
+  -moz-animation: 3200ms lightning linear infinite;
 }
 
 #cloud4 .lightning {
+  animation: 3500ms lightning linear infinite;
   -webkit-animation: 3500ms lightning linear infinite;
+  -moz-animation: 3500ms lightning linear infinite;
 }
 
 #cloud5 .lightning {
+  animation: 2800ms lightning linear infinite;
   -webkit-animation: 2800ms lightning linear infinite;
+  -moz-animation: 2800ms lightning linear infinite;
 }
 
 #cloud6 .lightning {
+  animation: 5000ms lightning linear infinite;
   -webkit-animation: 5000ms lightning linear infinite;
+  -moz-animation: 5000ms lightning linear infinite;
 }
 
 #cloud9 .lightning {
+  animation: 2200ms lightning linear infinite;
   -webkit-animation: 2200ms lightning linear infinite;
+  -moz-animation: 2200ms lightning linear infinite;
 }
 
 #cloud10 .lightning {
+  animation: 1000ms lightning linear infinite;
   -webkit-animation: 1000ms lightning linear infinite;
+  -moz-animation: 1000ms lightning linear infinite;
 }
 
 #cloud11 .lightning {
+  animation: 1300ms lightning linear infinite;
   -webkit-animation: 1300ms lightning linear infinite;
+  -moz-animation: 1300ms lightning linear infinite;
 }
 
 #cloud12 .lightning {
+  animation: 4200ms lightning linear infinite;
   -webkit-animation: 4200ms lightning linear infinite;
+  -moz-animation: 4200ms lightning linear infinite;
 }
 
 #cloud13 .lightning {
+  animation: 5100ms lightning linear infinite;
   -webkit-animation: 5100ms lightning linear infinite;
+  -moz-animation: 5100ms lightning linear infinite;
 }
 
 #cloud14 .lightning {
+  animation: 2400ms lightning linear infinite;
   -webkit-animation: 2400ms lightning linear infinite;
+  -moz-animation: 2400ms lightning linear infinite;
 }
 
 #cloud15 .lightning {
+  animation: 4800ms lightning linear infinite;
   -webkit-animation: 4800ms lightning linear infinite;
+  -moz-animation: 4800ms lightning linear infinite;
 }
 
 #cloud16 .lightning {
+  animation: 3900ms lightning linear infinite;
   -webkit-animation: 3900ms lightning linear infinite;
+  -moz-animation: 3900ms lightning linear infinite;
 }
 
 /* Cityscape ------------------------------------------------------*/
@@ -1062,6 +1132,7 @@ ul li {
 
 #water1 .waves {
   -webkit-animation: 6s waves ease-in-out infinite;
+  -moz-animation: 6s waves ease-in-out infinite;
 }
 
 #water2 {
@@ -1077,11 +1148,13 @@ ul li {
 #water2 .waves {
   background-position: 20px 0;
   -webkit-animation: 5s waves ease-in-out infinite;
+  -moz-animation: 5s waves ease-in-out infinite;
 }
 
 #water3 .waves {
   background-position: 30px 0;
   -webkit-animation: 7s waves ease-in-out infinite;
+  -moz-animation: 7s waves ease-in-out infinite;
 }
 
 .water {
@@ -1216,6 +1289,8 @@ ul li {
   position: absolute;
   top: 400px;
   border-radius: 15px/15px 5px 10px 5px;
+  -webkit-border-radius: 15px/15px 5px 10px 5px;
+  -moz-border-radius: 15px/15px 5px 10px 5px;
   width: 25px;
   height: 15px;
   background: rgb(178,168,89);
@@ -1234,6 +1309,8 @@ ul li {
   left: 3px;
   background: #444;
   border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
   width: 2px;
   height: 2px;
 }
@@ -1265,6 +1342,8 @@ ul li {
   top: 10px;
   left: 6px;
   box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
   background: #222;
 }
 
@@ -1274,13 +1353,15 @@ ul li {
 
 .medium.fish .top-fin {
   border-top: 12px solid transparent;
-  border-left: 0 solid transparent;
+  border-left: 0px solid transparent;
   border-bottom: 0;
   border-right: 9px solid #7C8241;
   position: absolute;
   top: -8px;
   left: 45%;
+  transform: rotate(20deg);
   -webkit-transform: rotate(20deg);
+  -moz-transform: rotate(20deg);
 }
 
 .medium.fish .bottom-fin {
@@ -1291,7 +1372,9 @@ ul li {
   position: absolute;
   bottom: -5px;
   left: 50%;
+  transform: rotate(-20deg);
   -webkit-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
 }
 
 #fish23 {
@@ -1300,6 +1383,7 @@ ul li {
   left: 200px;
   z-index: 20;
   -webkit-animation: 20100ms dally linear infinite;
+  -moz-animation: 20100ms dally linear infinite;
 }
 
 /* Petri Dish -------------------------------------*/
@@ -1325,7 +1409,11 @@ ul li {
   border: 4px solid #ae1313;
   position: absolute;
   border-radius: 80px 50px 70px 50px;
+  -webkit-border-radius: 80px 50px 70px 50px;
+  -moz-border-radius: 80px 50px 70px 50px;
   box-shadow: 0px 0px 20px 5px #ae1313;
+  -webkit-box-shadow: 0px 0px 20px 5px #ae1313;
+  -moz-box-shadow: 0px 0px 20px 5px #ae1313;
 }
 
 .virus.dark {
@@ -1370,31 +1458,41 @@ ul li {
 #virus2 {
   top: 116px;
   left: 49%;
-  -webkit-transform: rotate(10deg)
+  transform: rotate(10deg);
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
 }
 
 #virus3 {
   top: 300px;
   left: 35%;
-  -webkit-transform: rotate(40deg)
+  transform: rotate(40deg);
+  -webkit-transform: rotate(40deg);
+  -moz-transform: rotate(40deg);
 }
 
 #virus4 {
   top: 365px;
   left: 57%;
-  -webkit-transform: rotate(70deg)
+  transform: rotate(70deg);
+  -webkit-transform: rotate(70deg);
+  -moz-transform: rotate(70deg);
 }
 
 #virus5 {
   top: 936px;
   left: 82%;
+  transform: rotate(-10deg);
   -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
 }
 
 #virus6 {
   top: 201px;
   left: 25%;
-  -webkit-transform: rotate(-5deg)
+  transform: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
 }
 
 #virus7 {
@@ -1405,187 +1503,249 @@ ul li {
 #virus8 {
   top: 455px;
   left: 20%;
-  -webkit-transform: rotate(-130deg)
+  transform: rotate(-130deg);
+  -webkit-transform: rotate(-130deg);
+  -moz-transform: rotate(-130deg);
 }
 
 #virus9 {
   top: 546px;
   left: 40%;
-  -webkit-transform: rotate(45deg)
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
 }
 
 #virus10 {
   top: 349px;
   left: -4%;
-  -webkit-transform: rotate(25deg)
+  transform: rotate(25deg);
+  -webkit-transform: rotate(25deg);
+  -moz-transform: rotate(25deg);
 }
 
 #virus11 {
   top: 600px;
   left: 95%;
-  -webkit-transform: rotate(67deg)
+  transform: rotate(67deg);
+  -webkit-transform: rotate(67deg);
+  -moz-transform: rotate(67deg);
 }
 
 #virus12 {
   top: 418px;
   left: 55%;
-  -webkit-transform: rotate(281deg)
+  transform: rotate(281deg);
+  -webkit-transform: rotate(281deg);
+  -moz-transform: rotate(281deg);
 }
 
 #virus13 {
   top: 610px;
   left: 12%;
-  -webkit-transform: rotate(21deg)
+  transform: rotate(21deg);
+  -webkit-transform: rotate(21deg);
+  -moz-transform: rotate(21deg);
 }
 
 #virus14 {
   top: 498px;
   left: 78%;
-  -webkit-transform: rotate(-45deg)
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
 }
 
 #virus15 {
   top: 700px;
   left: -4%;
-  -webkit-transform: rotate(17deg)
+  transform: rotate(17deg);
+  -webkit-transform: rotate(17deg);
+  -moz-transform: rotate(17deg);
 }
 
 #virus16 {
   top: 750px;
   left: 35%;
-  -webkit-transform: rotate(1deg)
+  transform: rotate(1deg);
+  -webkit-transform: rotate(1deg);
+  -moz-transform: rotate(1deg);
 }
 
 #virus17 {
   top: 660px;
   left: 65%;
-  -webkit-transform: rotate(-31deg)
+  transform: rotate(-31deg);
+  -webkit-transform: rotate(-31deg);
+  -moz-transform: rotate(-31deg);
 }
 
 #virus18 {
   top: 635px;
   left: 17%;
-  -webkit-transform: rotate(121deg)
+  transform: rotate(121deg);
+  -webkit-transform: rotate(121deg);
+  -moz-transform: rotate(121deg);
 }
 
 #virus19 {
   top: 618px;
   left: 73%;
-  -webkit-transform: rotate(295deg)
+  transform: rotate(295deg);
+  -webkit-transform: rotate(295deg);
+  -moz-transform: rotate(295deg);
 }
 
 #virus20 {
   top: 677px;
   left: 80%;
-  -webkit-transform: rotate(330deg)
+  transform: rotate(330deg);
+  -webkit-transform: rotate(330deg);
+  -moz-transform: rotate(330deg);
 }
 
 #virus21 {
   top: 702px;
   left: 16%;
-  -webkit-transform: rotate(-20deg)
+  transform: rotate(-20deg);
+  -webkit-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
 }
 
 #virus22 {
   top: 1px;
   left: 45%;
-  -webkit-transform: rotate(-20deg)
+  transform: rotate(-20deg);
+  -webkit-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
 }
 
 #virus23 {
   top: 765px;
   left: 48%;
+  transform: rotate(-285deg);
   -webkit-transform: rotate(-285deg);
+  -moz-transform: rotate(-285deg);
 }
 
 #virus24 {
   top: 750px;
   left: 3%;
-  -webkit-transform: rotate(-211deg)
+  transform: rotate(-211deg);
+  -webkit-transform: rotate(-211deg);
+  -moz-transform: rotate(-211deg);
 }
 
 #virus25 {
   top: 800px;
   left: 55%;
-  -webkit-transform: rotate(-11deg)
+  transform: rotate(-11deg);
+  -webkit-transform: rotate(-11deg);
+  -moz-transform: rotate(-11deg);
 }
 
 #virus26 {
   top: 757px;
   left: 92%;
-  -webkit-transform: rotate(31deg)
+  transform: rotate(31deg);
+  -webkit-transform: rotate(31deg);
+  -moz-transform: rotate(31deg);
 }
 
 #virus27 {
   top: 760px;
   left: 57%;
-  -webkit-transform: rotate(45deg)
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
 }
 
 #virus28 {
   top: 800px;
   left: 73%;
-  -webkit-transform: rotate(-115deg)
+  transform: rotate(-115deg);
+  -webkit-transform: rotate(-115deg);
+  -moz-transform: rotate(-115deg);
 }
 
 #virus29 {
   top: 830px;
   left: 25%;
-  -webkit-transform: rotate(275deg)
+  transform: rotate(275deg);
+  -webkit-transform: rotate(275deg);
+  -moz-transform: rotate(275deg);
 }
 
 #virus30 {
   top: 838px;
   left: 3%;
-  -webkit-transform: rotate(-205deg)
+  transform: rotate(-205deg);
+  -webkit-transform: rotate(-205deg);
+  -moz-transform: rotate(-205deg);
 }
 
 #virus31 {
   top: 801px;
   left: 86%;
-  -webkit-transform: rotate(-305deg)
+  transform: rotate(-305deg);
+  -webkit-transform: rotate(-305deg);
+  -moz-transform: rotate(-305deg);
 }
 
 #virus32 {
   top: 850px;
   left: 87%;
-  -webkit-transform: rotate(-15deg)
+  transform: rotate(-15deg);
+  -webkit-transform: rotate(-15deg);
+  -moz-transform: rotate(-15deg);
 }
 
 #virus33 {
   top: 852px;
   left: 68%;
-  -webkit-transform: rotate(-95deg)
+  transform: rotate(-95deg);
+  -webkit-transform: rotate(-95deg);
+  -moz-transform: rotate(-95deg);
 }
 
 #virus34 {
   top: 798px;
   left: 36%;
-  -webkit-transform: rotate(-95deg)
+  transform: rotate(-95deg);
+  -webkit-transform: rotate(-95deg);
+  -moz-transform: rotate(-95deg);
 }
 
 #virus35 {
   top: 917px;
   left: 14%;
-  -webkit-transform: rotate(-155deg)
+  transform: rotate(-155deg);
+  -webkit-transform: rotate(-155deg);
+  -moz-transform: rotate(-155deg);
 }
 
 #virus36 {
   top: 976px;
   left: 46%;
-  -webkit-transform: rotate(-155deg)
+  transform: rotate(-155deg);
+  -webkit-transform: rotate(-155deg);
+  -moz-transform: rotate(-155deg);
 }
 
 #virus37 {
   top: 995px;
   left: 38%;
+  transform: rotate(-229deg);
   -webkit-transform: rotate(-229deg);
+  -moz-transform: rotate(-229deg);
 }
 
 #virus38 {
   top: 824px;
   left: 21%;
+  transform: rotate(-155deg);
   -webkit-transform: rotate(-155deg);
+  -moz-transform: rotate(-155deg);
 }
 
 #virus39 {
@@ -1596,67 +1756,89 @@ ul li {
 #virus40 {
   top: 906px;
   left: 56%;
+  transform: rotate(-155deg);
   -webkit-transform: rotate(-155deg);
+  -moz-transform: rotate(-155deg);
 }
 
 #virus41 {
   top: 874px;
   left: 59%;
+  transform: rotate(55deg);
   -webkit-transform: rotate(55deg);
+  -moz-transform: rotate(55deg);
 }
 
 #virus42 {
   top: 929px;
   left: 74%;
+  transform: rotate(-255deg);
   -webkit-transform: rotate(-255deg);
+  -moz-transform: rotate(-255deg);
 }
 
 #virus43 {
   top: 961px;
   left: 71%;
+  transform: rotate(35deg);
   -webkit-transform: rotate(35deg);
+  -moz-transform: rotate(35deg);
 }
 
 #virus44 {
   top: 888px;
   left: 44%;
+  transform: rotate(-195deg);
   -webkit-transform: rotate(-195deg);
+  -moz-transform: rotate(-195deg);
 }
 
 #virus45 {
   top: 979px;
   left: 59%;
+  transform: rotate(-155deg);
   -webkit-transform: rotate(-155deg);
+  -moz-transform: rotate(-155deg);
 }
 
 #virus46 {
   top: 932px;
   left: 39%;
+  transform: rotate(5deg);
   -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
 }
 
 #virus47 {
   top: 969px;
   left: 51%;
+  transform: rotate(-55deg);
   -webkit-transform: rotate(-55deg);
+  -moz-transform: rotate(-55deg);
 }
 
 #virus48 {
   top: 979px;
   left: 76%;
+  transform: rotate(-66deg);
   -webkit-transform: rotate(-66deg);
+  -moz-transform: rotate(-66deg);
 }
 
 #virus49 {
   top: 884px;
   left: 24%;
+  transform: rotate(-155deg);
   -webkit-transform: rotate(-155deg);
+  -moz-transform: rotate(-155deg);
 }
 
 #virus50 {
   top: 958px;
   left: 19%;
+  transform: rotate(-110deg);
   -webkit-transform: rotate(-110deg);
+  -moz-transform: rotate(-110deg);
 }
 
 #virus51 {
@@ -1667,31 +1849,41 @@ ul li {
 #virus52 {
   top: 1075px;
   left: 21%;
+  transform: rotate(-111deg);
   -webkit-transform: rotate(-111deg);
+  -moz-transform: rotate(-111deg);
 }
 
 #virus53 {
   top: 1075px;
   left: 30%;
+  transform: rotate(-155deg);
   -webkit-transform: rotate(-155deg);
+  -moz-transform: rotate(-155deg);
 }
 
 #virus54 {
   top: 1078px;
   left: 56%;
+  transform: rotate(-110deg);
   -webkit-transform: rotate(-110deg);
+  -moz-transform: rotate(-110deg);
 }
 
 #virus55 {
   top: 1143px;
   left: 47%;
+  transform: rotate(-110deg);
   -webkit-transform: rotate(-110deg);
+  -moz-transform: rotate(-110deg);
 }
 
 #virus56 {
   top: 1016px;
   left: 94%;
+  transform: rotate(-110deg);
   -webkit-transform: rotate(-110deg);
+  -moz-transform: rotate(-110deg);
 }
 
 .bacteria {
@@ -1705,8 +1897,12 @@ ul li {
   border: 2px solid #9cc039;
   position: absolute;
   border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
   width: 10px;
   box-shadow: 0px 0px 10px 3px #84a624;
+  -webkit-box-shadow: 0px 0px 10px 3px #84a624;
+  -moz-box-shadow: 0px 0px 10px 3px #84a624;
 }
 
 .bacteria.short {
@@ -1720,259 +1916,345 @@ ul li {
 #bacteria1 {
   top: 349px;
   right: 5%;
-  -webkit-transform: rotate(-15deg)  
+  transform: rotate(-15deg);
+  -webkit-transform: rotate(-15deg);
+  -moz-transform: rotate(-15deg);
 }
 
 #bacteria2 {
   top: 79px;
   right: 14%;
-  -webkit-transform: rotate(-45deg)  
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
 }
 
 #bacteria3 {
   top: 368px;
   right: 95%;
+  transform: rotate(14deg);
   -webkit-transform: rotate(14deg);
+  -moz-transform: rotate(14deg);
 }
 
 #bacteria4 {
   top: -118px;
   right: 33%;
-  -webkit-transform: rotate(-32deg)
+  transform: rotate(-32deg);
+  -webkit-transform: rotate(-32deg);
+  -moz-transform: rotate(-32deg);
 }
 
 #bacteria5 {
   top: 202px;
   right: 28%;
+  transform: rotate(174deg);
   -webkit-transform: rotate(174deg);
+  -moz-transform: rotate(174deg);
 }
 
 #bacteria6 {
   top: 348px;
   right: 71%;
+  transform: rotate(292deg);
   -webkit-transform: rotate(292deg);
+  -moz-transform: rotate(292deg);
 }
 
 #bacteria7 {
   top: 207px;
   right: 84%;
-  -webkit-transform: rotate(6deg)  
+  transform: rotate(6deg);
+  -webkit-transform: rotate(6deg);
+  -moz-transform: rotate(6deg);
 }
 
 #bacteria8 {
   top: 322px;
   right: 76%;
-  -webkit-transform: rotate(61deg)
+  transform: rotate(61deg);
+  -webkit-transform: rotate(61deg);
+  -moz-transform: rotate(61deg);
 }
 
 #bacteria9 {
   top: 476px;
   right: 32%;
+  transform: rotate(100deg);
   -webkit-transform: rotate(100deg);
+  -moz-transform: rotate(100deg);
 }
 
 #bacteria10 {
   top: 545px;
   right: 95%;
-  -webkit-transform: rotate(341deg)  
+  transform: rotate(341deg);
+  -webkit-transform: rotate(341deg);
+  -moz-transform: rotate(341deg);
 }
 
 #bacteria11 {
   top: 610px;
   right: 40%;
-  -webkit-transform: rotate(321deg)
+  transform: rotate(321deg);
+  -webkit-transform: rotate(100deg);
+  -moz-transform: rotate(100deg);
 }
 
 #bacteria12 {
   top: 590px;
   right: 10%;
+  transform: rotate(373deg);
   -webkit-transform: rotate(373deg);
+  -moz-transform: rotate(373deg);
 }
 
 #bacteria13 {
   top: 690px;
   right: 67%;
-  -webkit-transform: rotate(341deg)
+  transform: rotate(341deg);
+  -webkit-transform: rotate(341deg);
+  -moz-transform: rotate(341deg);
 }
 
 #bacteria14 {
   top: 712px;
   right: 42%;
-  -webkit-transform: rotate(81deg)  
+  transform: rotate(81deg);
+  -webkit-transform: rotate(81deg);
+  -moz-transform: rotate(81deg);
 }
 
 #bacteria15 {
   top: 719px;
   right: 22%;
-  -webkit-transform: rotate(61deg)  
+  transform: rotate(61deg);
+  -webkit-transform: rotate(61deg);
+  -moz-transform: rotate(61deg);
 }
 
 #bacteria16 {
   top: 752px;
   right: 68%;
+  transform: rotate(136deg);
   -webkit-transform: rotate(136deg);
+  -moz-transform: rotate(136deg);
 }
 
 #bacteria17 {
   top: 843px;
   right: 87%;
+  transform: rotate(243deg); 
   -webkit-transform: rotate(243deg); 
+  -moz-transform: rotate(243deg); 
 }
 
 #bacteria18 {
   top: 811px;
   right: 102%;
-  -webkit-transform: rotate(231deg)  
+  transform: rotate(231deg);
+  -webkit-transform: rotate(231deg);
+  -moz-transform: rotate(231deg);
 }
 
 #bacteria19 {
   top: 823px;
   right: 87%;
+  transform: rotate(241deg); 
   -webkit-transform: rotate(241deg); 
+  -moz-transform: rotate(241deg); 
 }
 
 #bacteria20 {
   top: 935px;
   right: 1%;
+  transform: rotate(-8deg);
   -webkit-transform: rotate(-8deg);
+  -moz-transform: rotate(-8deg);
 }
 
 #bacteria21 {
   top: 912px;
   right: 92%;
+  transform: rotate(61deg);  
   -webkit-transform: rotate(61deg);  
+  -moz-transform: rotate(61deg);  
 }
 
 #bacteria22 {
   top: 940px;
   right: 60%;
+  transform: rotate(-67deg); 
   -webkit-transform: rotate(-67deg); 
+  -moz-transform: rotate(-67deg); 
 }
 
 #bacteria23 {
   top: 780px;
   right: -6%;
-  -webkit-transform: rotate(-114deg)  
+  transform: rotate(-114deg);
+  -webkit-transform: rotate(-114deg);
+  -moz-transform: rotate(-114deg);
 }
 
 #bacteria24 {
   top: 876px;
   right: 4%;
+  transform: rotate(-114deg);  
   -webkit-transform: rotate(-114deg);  
+  -moz-transform: rotate(-114deg);  
 }
 
 #bacteria25 {
   top: 447px;
   right: 42%;
-  -webkit-transform: rotate(-74deg)  
+  transform: rotate(-74deg);
+  -webkit-transform: rotate(-74deg);
+  -moz-transform: rotate(-74deg);
 }
 
 #bacteria26 {
   top: 806px;
   right: 32%;
-  -webkit-transform: rotate(-174deg)  
+  transform: rotate(-174deg);
+  -webkit-transform: rotate(-174deg);
+  -moz-transform: rotate(-174deg);
 }
 
 #bacteria27 {
   top: 888px;
   right: -1%;
+  transform: rotate(-289deg);  
   -webkit-transform: rotate(-289deg);  
+  -moz-transform: rotate(-289deg);  
 }
 
 #bacteria28 {
   top: 949px;
   right: 6%;
-  -webkit-transform: rotate(-354deg)  
+  transform: rotate(-354deg);
+  -webkit-transform: rotate(-354deg);
+  -moz-transform: rotate(-354deg);
 }
 
 #bacteria29 {
   top: 948px;
   right: 91%;
+  transform: rotate(-261deg);
   -webkit-transform: rotate(-261deg);
+  -moz-transform: rotate(-261deg);
 }
 
 #bacteria30 {
   top: 959px;
   right: 34%;
+  transform: rotate(-72deg);
   -webkit-transform: rotate(-72deg);
+  -moz-transform: rotate(-72deg);
 }
 
 #bacteria31 {
   top: 930px;
   right: 92%;
+  transform: rotate(95deg);
   -webkit-transform: rotate(95deg);
+  -moz-transform: rotate(95deg);
 }
 
 #bacteria32 {
   top: 985px;
   right: 63%;
+  transform: rotate(10deg);
   -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
 }
 
 #bacteria33 {
   top: 1005px;
   right: 53%;
+  transform: rotate(-98deg);
   -webkit-transform: rotate(-98deg);
+  -moz-transform: rotate(-98deg);
 }
 
 #bacteria34 {
   top: 1018px;
   right: 45%;
+  transform: rotate(-14deg); 
   -webkit-transform: rotate(-14deg); 
+  -moz-transform: rotate(-14deg);
 }
 
 #bacteria35 {
   top: 984px;
   right: 27%;
+  transform: rotate(-259deg);
   -webkit-transform: rotate(-259deg);
+  -moz-transform: rotate(-259deg);
 }
 
 #bacteria36 {
   top: 1044px;
   right: 50%;
+  transform: rotate(-10deg);
   -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
 }
 
 #bacteria37 {
   top: 1033px;
   right: 36%;
+  transform: rotate(-85deg); 
   -webkit-transform: rotate(-85deg); 
+  -moz-transform: rotate(-85deg); 
 }
 
 #bacteria38 {
   top: 1028px;
   right: 62%;
+  transform: rotate(-86deg);
   -webkit-transform: rotate(-86deg);
+  -moz-transform: rotate(-86deg);
 }
 
 #bacteria39 {
   top: 992px;
   right: 74%;
+  transform: rotate(-97deg); 
   -webkit-transform: rotate(-97deg); 
+  -moz-transform: rotate(-97deg); 
 }
 
 #bacteria40 {
   top: 1015px;
   right: 74%;
+  transform: rotate(-108deg); 
   -webkit-transform: rotate(-108deg); 
+  -moz-transform: rotate(-108deg); 
 }
 
 #bacteria41 {
   top: 1086px;
   right: 20%;
+  transform: rotate(-167deg); 
   -webkit-transform: rotate(-167deg); 
+  -moz-transform: rotate(-167deg); 
 }
 
 #bacteria42 {
   top: 1041px;
   right: 90%;
+  transform: rotate(-297deg);
   -webkit-transform: rotate(-297deg);
+  -moz-transform: rotate(-297deg);
 }
 
 #bacteria43 {
   top: 982px;
   right: -10%;
+  transform: rotate(-287deg);
   -webkit-transform: rotate(-287deg);
+  -moz-transform: rotate(-287deg);
 }
 
 
@@ -2107,7 +2389,11 @@ ul li {
   font-weight: bold;
   line-height: 3.7;
   border-radius: 200px;
+  -webkit-border-radius: 200px;
+  -moz-border-radius: 200px;
+  transform: rotate(-5deg);
   -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
   z-index: 2;
 }
 
@@ -2135,6 +2421,8 @@ ul li {
 #leaf {
   background: green;
   border-radius: 10px/0px 20px;
+  -webkit-border-radius: 10px/0px 20px;
+  -moz-border-radius: 10px/0px 20px;
   width: 5px;
   height: 10px;
   position: absolute;
@@ -2158,14 +2446,20 @@ ul li {
   background: -ms-linear-gradient(top,  rgba(255,255,255,1) 1%,rgba(107,107,107,1) 100%);
   background: linear-gradient(to bottom,  rgba(255,255,255,1) 1%,rgba(107,107,107,1) 100%);
   box-shadow: inset 0 3px 32px 2px white;
+  -webkit-box-shadow: inset 0 3px 32px 2px white;
+  -moz-box-shadow: inset 0 3px 32px 2px white;
   border-radius: 35px 35px 35px 35px / 55px 55px 40px 40px;
+  -webkit-border-radius: 35px 35px 35px 35px / 55px 55px 40px 40px;
+  -moz-border-radius: 35px 35px 35px 35px / 55px 55px 40px 40px;
   width: 50px;
   height: 70px;
   display: inline-block;
 }
 
 #egg1 {
+  transform: rotate(10deg);
   -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
   position: relative;
   left: 63%;
   top: -400px;
@@ -2173,7 +2467,9 @@ ul li {
 }
 
 #egg2 {
+  transform: rotate(-70deg);
   -webkit-transform: rotate(-70deg);
+  -moz-transform: rotate(-70deg);
   z-index: 1;
   top: -100px;
   left: -75%;
@@ -2181,7 +2477,9 @@ ul li {
 }
 
 #egg3 {
+  transform: rotate(-4deg);
   -webkit-transform: rotate(-4deg);
+  -moz-transform: rotate(-4deg);
   position: relative;
   top: 160px;
   left: 45%;
@@ -2192,7 +2490,9 @@ ul li {
   position: absolute;
   top: 750px;
   right: 45%;
+  transform: rotate(34deg);
   -webkit-transform: rotate(34deg);
+  -moz-transform: rotate(34deg);
 }
 
 #lip {
@@ -2306,7 +2606,9 @@ ul li {
   height: 448px;
   top: 50px;
   left: -12%;
+  transform: scale3d(0.3, 0.3, 1);
   -webkit-transform: scale3d(0.3, 0.3, 1);
+  -moz-transform: scale3d(0.3, 0.3, 1);
 }
 
 .bread {
@@ -2323,10 +2625,14 @@ ul li {
   top: 750px;
   left: 76px;
   border-radius: 80px 80px 60px 60px/45px 45px 30px 30px;
+  -webkit-border-radius: 80px 80px 60px 60px/45px 45px 30px 30px;
+  -moz-border-radius: 80px 80px 60px 60px/45px 45px 30px 30px;
 }
 
 .bread-cut {
   border-radius: 30px 0px/30px;
+  -webkit-border-radius: 30px 0px/30px;
+  -moz-border-radius: 30px 0px/30px;
   width: 35px;
   height: 35px;
   background: rgb(158,113,69);
@@ -2356,6 +2662,8 @@ ul li {
   top: 68%;
   left: 2%;
   border-radius: 80px 45px 30px 80px/80px 115px 95px 130px;
+  -webkit-border-radius: 80px 45px 30px 80px/80px 115px 95px 130px;
+  -moz-border-radius: 80px 45px 30px 80px/80px 115px 95px 130px;
 }
 
 #loaf1 .bread-cut,
@@ -2439,49 +2747,65 @@ ul li {
 #smoke1 {
   top: -100px;
   left: -10%;
-  -webkit-animation: 70s smoke infinite linear;
+  animation: 60s smoke infinite linear;
+  -webkit-animation: 60s smoke infinite linear;
+  -moz-animation: 60s smoke infinite linear;
 }
 
 #smoke2 {
   top: 50px;
   left: 55%;
+  animation: 50s smoke infinite linear;
   -webkit-animation: 50s smoke infinite linear;
+  -moz-animation: 50s smoke infinite linear;
 }
 
 #smoke3 {
   top:350px;
   left: 10%;
-  -webkit-animation: 60s smoke infinite linear;
+  animation: 55s smoke infinite linear;
+  -webkit-animation: 55s smoke infinite linear;
+  -moz-animation: 55s smoke infinite linear;
 }
 
 #smoke4 {
   top: 189px;
   left: -36%;
-  -webkit-animation: 75s smoke infinite linear;
+  animation: 40s smoke infinite linear;
+  -webkit-animation: 40s smoke infinite linear;
+  -moz-animation: 40s smoke infinite linear;
 }
 
 #smoke5 {
   top: 650px;
   left: -30%;
-  -webkit-animation: 65s smoke infinite linear;
+  animation: 45s smoke infinite linear;
+  -webkit-animation: 45s smoke infinite linear;
+  -moz-animation: 45s smoke infinite linear;
 }
 
 #smoke6 {
   top: 757px;
   left: 16%;
+  animation: 55s smoke infinite linear;
   -webkit-animation: 55s smoke infinite linear;
+  -moz-animation: 55s smoke infinite linear;
 }
 
 #smoke7 {
   top: 550px;
   left: 2%;
-  -webkit-animation: 45s smoke infinite linear;
+  animation: 60s smoke infinite linear;
+  -webkit-animation: 60s smoke infinite linear;
+  -moz-animation: 60s smoke infinite linear;
 }
 
 #smoke8 {
   top: 570px;
   left: 57%;
-  -webkit-animation: 40s smoke infinite linear;
+  animation: 50s smoke infinite linear;
+  -webkit-animation: 50s smoke infinite linear;
+  -moz-animation: 50s smoke infinite linear;
 }
 
 #gun15 .barrel,
@@ -2778,6 +3102,8 @@ ul li {
   width: 3px;
   background: #0a0a0a;
   border-radius: 3px / 20px;
+  -webkit-border-radius: 3px / 20px;
+  -moz-border-radius: 3px / 20px;
   position: absolute;
   top: 1px;
   left: 1px;
@@ -2797,6 +3123,9 @@ ul li {
   background: -o-linear-gradient(top,  rgba(56,56,56,1) 1%,rgba(22,22,22,1) 50%,rgba(43,43,43,1) 66%,rgba(10,10,10,1) 86%,rgba(0,0,0,1) 100%);
   background: -ms-linear-gradient(top,  rgba(56,56,56,1) 1%,rgba(22,22,22,1) 50%,rgba(43,43,43,1) 66%,rgba(10,10,10,1) 86%,rgba(0,0,0,1) 100%);
   background: linear-gradient(to bottom,  rgba(56,56,56,1) 1%,rgba(22,22,22,1) 50%,rgba(43,43,43,1) 66%,rgba(10,10,10,1) 86%,rgba(0,0,0,1) 100%);
+  border-radius: 20px/60px;
+  -webkit-border-radius: 20px/60px;
+  -moz-border-radius: 20px/60px;
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#383838', endColorstr='#000000',GradientType=0 );
 }
 
@@ -2826,7 +3155,7 @@ ul li {
 
 .flagpole {
   position: absolute;
-  top:5px;
+  top: 5px;
   width: 140px;
   z-index: 5;
 }
@@ -2864,6 +3193,8 @@ ul li {
   height: 4px;
   width: 4px;
   border-radius: 11px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
 }
 
 .flag {
@@ -3151,7 +3482,7 @@ ul li {
 #take-action {
   position: relative;
   background: #d3dae3;
-  padding: 30px 25px 50px 25px;
+  padding: 30px 15px 50px 15px;
   z-index: 15;
 }
 
@@ -3160,7 +3491,7 @@ ul li {
 }
 
 #take-action a:hover {
-   border-bottom: 1px dotted #5d260e;
+  border-bottom: 1px dotted #5d260e;
 }
 
 #take-action:after {
@@ -3176,19 +3507,21 @@ ul li {
   width: 100%;
   text-align: center;
   font-size: 2em;
-  padding: 0 0 .3em 0;
+  padding: 0 0 .5em 0;
   font-weight: normal;
   color: #404B55;
   z-index: 10;
   text-transform: uppercase;
   line-height: 1.1;
+  margin-bottom: .7em;
+  border-bottom: 3px solid #BEC7CF
 }
 
 #action-heading span {
   display: block;
   font-size: .3em;
   letter-spacing: 1em;
-  margin-bottom: .5em;
+  margin-bottom: .2em;
   color: #697681;
 }
 
@@ -3202,30 +3535,31 @@ ul li {
   margin-bottom: 1.4em;
 }
 
-.instructions {
-  text-align: left;
+#template .instructions {
+  text-align: center;
   font-size: 1.1em;
   line-height: 1.4;
-  padding: 0 0 20px 82px;
+  padding: 40px 0 20px 0;
+  margin-bottom: 20px;
   color: #73797E;
   display: block;
   background: #fff;
+  font-weight: bold;
   font-family: Georgia, serif;
-  background: transparent url(../images/template_icon_bg_mobile.png) 8px 6px no-repeat;
-  border-bottom: 5px solid #BEC7CF;
-  min-height: 48px;
+  background: transparent url(../images/template_icon_bg_mobile.png) top center no-repeat;
+  border-bottom: 1px solid #AFB9C2;
 }
 
 #template {
-  float: left;
-  width: 100%;
+  background: #BEC7CF;
+  padding: 20px;
   font-size: .8em;
-  margin-top: 2em;
+  margin-top: 2.4em;
 }
 
 #template p {
-  color: #4f5155;
-    text-align: left;
+  color: #73797E;
+  text-align: left;
   font-size: 1.2em;
   line-height: 1.4;
 }
@@ -3240,9 +3574,7 @@ ul li {
 
 #take-action-form {
   display: block;
-  background: #BEC7CF;
-  padding: 20px;
-  margin-bottom: 2em;
+  margin-bottom: 1.3em;
   overflow: hidden;
 }
 
@@ -3256,6 +3588,8 @@ ul li {
   outline: none;
   background: white url(../images/zipcode_bg_mobile.png) 10px 8px no-repeat;
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   -webkit-appearance: none;
 }
 
@@ -3266,21 +3600,25 @@ ul li {
   color: #868b8e;
   float: left;
   width: 100%;
-  margin-top: 1.8em;
+  margin-top: 1.2em;
 }
 
 #submit {
   width: 100%;
   display: block;
-  margin: 1em auto 0 auto;
+  margin: .5em auto 0 auto;
   background: #70351C;
   border: 1px solid #550F0F;
   padding: 9px 20px 12px;
   font-size: 1em;
   color: #fff;
   text-shadow: 0 -1px 0 #283d48;
+  -webkit-text-shadow: 0 -1px 0 #283d48;
+  -moz-text-shadow: 0 -1px 0 #283d48;
   cursor: pointer;
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   -webkit-appearance: none;
 }
 
@@ -3395,6 +3733,7 @@ ul li {
 
   #blue-sky p {
     margin-bottom: .5em;
+    display: block;
   }
 
   #blue-sky .reflow {
@@ -3403,6 +3742,7 @@ ul li {
 
   #main-heading {
     font-size: 4em;
+    border-bottom-width: 5px;
     padding-top: 0;
   }
 
@@ -3423,8 +3763,8 @@ ul li {
   }
     
   #instructions li {
-    width: 28.7%;
-    padding: 100px 2% 10px 2%;
+    width: 26.7%;
+    padding: 100px 3% 10px 3%;
     font-size: 1.05em;
     border-left: 2px solid #69788D;
   }
@@ -3458,11 +3798,6 @@ ul li {
     background-position: -170px 0;
   }
 
-  #start-btn:hover {
-    background: white;
-    color: rgb(70,94,127);
-  }
-
   #wrapper {
     width: 768px;
     margin: 0 auto 0 auto;
@@ -3482,6 +3817,18 @@ ul li {
     height: 1700px;
     z-index: 10;
   }
+  
+  #effects-intro {
+    font-size: 4em;
+    position: absolute;
+    top: 600px;
+    width: 100%;
+    padding-top: 280px;
+  }
+  
+  #intro-effects {
+    font-size: .3em;
+  }
 
   #blue-sky {
     height: 600px;
@@ -3493,11 +3840,12 @@ ul li {
   }
 
   #cloud2 {
-    top: 530px;
+    top: 680px;
   }
 
   #cloud3 {
     top: 42px;
+    right: -32%;
   }
 
   #cloud4 {
@@ -3517,7 +3865,8 @@ ul li {
   }
 
   #cloud8 {
-    top: 58px;
+    top: 28px;
+    right: 33%;
   }
 
   #cloud9 {
@@ -3622,8 +3971,9 @@ ul li {
   #building2 .window {
     background: none;
     box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
     border: 1px solid rgba(255,255,255,0.1);
-    box-sizing: border-box;
     margin: 0;
     width: 20%;
   }
@@ -3658,6 +4008,8 @@ ul li {
     height: 14px;
     margin-left: -7px;
     border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
   }
 
   #building3 {
@@ -3791,8 +4143,12 @@ ul li {
   #building9 .window {
     background: none;
     box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
     border: 4px solid rgba(255,255,255,0.08);
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     border-top-width: 1px;
     border-bottom-width: 1px;
     margin: 0;
@@ -3825,8 +4181,12 @@ ul li {
   #building12 .window {
     background: none;
     box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
     border: 1px solid #4E575E;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     border-top-width: 2px;
     border-right-width: 8px;
     margin: 0;
@@ -3840,7 +4200,7 @@ ul li {
     width: 100%;
     border-top: 0 solid transparent;
     border-left: 30px solid transparent;
-    border-right: 30px solid transparen;
+    border-right: 30px solid transparent;
     border-bottom: 40px solid #464943;
   }
 
@@ -3876,7 +4236,9 @@ ul li {
   }
 
   #water1 .waves {
+    animation: 6s waves ease-in-out infinite;
     -webkit-animation: 6s waves ease-in-out infinite;
+    -moz-animation: 6s waves ease-in-out infinite;
   }
 
   #water2 {
@@ -3891,12 +4253,16 @@ ul li {
 
   #water2 .waves {
     background-position: 20px 0;
+    animation: 5s waves ease-in-out infinite;
     -webkit-animation: 5s waves ease-in-out infinite;
+    -moz-animation: 5s waves ease-in-out infinite;
   }
 
   #water3 .waves {
     background-position: 30px 0;
+    animation: 7s waves ease-in-out infinite;
     -webkit-animation: 7s waves ease-in-out infinite;
+    -moz-animation: 7s waves ease-in-out infinite;
   }
 
   .water {
@@ -4005,14 +4371,18 @@ ul li {
     top: 215px;
     right: 330px;
     z-index: 11;
+    transform: scale(0.5) rotate(-20deg);
     -webkit-transform: scale(0.5) rotate(-20deg);
+    -moz-transform: scale(0.5) rotate(-20deg);
   }
 
   #fish23 {
     top: 825px;
     left: 400px;
     z-index: 20;
+    animation: 20100ms dally linear infinite;
     -webkit-animation: 20100ms dally linear infinite;
+    -moz-animation: 20100ms dally linear infinite;
   }
 
   /* Petri Dish -------------------*/
@@ -4439,7 +4809,11 @@ ul li {
   .bacteria {
     border: 4px solid #9cc039;
     box-shadow: 0px 0px 20px 3px #84a624;
+    -webkit-box-shadow: 0px 0px 20px 3px #84a624;
+    -moz-box-shadow: 0px 0px 20px 3px #84a624;
     border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
     width: 20px;
   }
 
@@ -4490,6 +4864,8 @@ ul li {
 
   #leaf {
     border-radius: 20px/0px 40px;
+    -webkit-border-radius: 20px/0px 40px;
+    -moz-border-radius: 20px/0px 40px;
     width: 10px;
     height: 20px;
     top: -10px;
@@ -4505,6 +4881,10 @@ ul li {
   .egg {
     box-shadow: inset 0 3px 32px 2px white;
     border-radius: 70px 70px 70px 70px /110px 110px 80px 80px;
+    -webkit-box-shadow: inset 0 3px 32px 2px white;
+    -webkit-border-radius: 70px 70px 70px 70px /110px 110px 80px 80px;
+    -moz-box-shadow: inset 0 3px 32px 2px white;
+    -moz-border-radius: 70px 70px 70px 70px /110px 110px 80px 80px;
     width: 100px;
     height: 140px;
     display: inline-block;
@@ -4534,7 +4914,7 @@ ul li {
     width: 184px;
     height: 11px;
     font-size: .7em;
-    margin-left: 45px;
+    margin-left: 46px;
   }
 
   #carton-top {
@@ -4597,7 +4977,7 @@ ul li {
     border-top: 0px solid transparent;
     position: absolute;
     top: -100px;
-    left: 0;
+    left: -1px;
   }
 
   #carton-side-top-fix {
@@ -4607,7 +4987,7 @@ ul li {
     border-top: 0px solid transparent;
     position: absolute;
     top: -40px;
-    left: 0;
+    left: -1px;
   }
 
   #carton-side-bottom {
@@ -4624,10 +5004,14 @@ ul li {
     width: 800px;
     height: 140px;
     border-radius: 160px 90px 60px 160px/160px 230px 190px 260px;
+    -webkit-border-radius: 160px 90px 60px 160px/160px 230px 190px 260px;
+    -moz-border-radius: 160px 90px 60px 160px/160px 230px 190px 260px;
   }
 
   .bread-cut {
     border-radius: 60px 0px/60px;
+    -webkit-border-radius: 60px 0px/60px;
+    -moz-border-radius: 60px 0px/60px;
     width: 70px;
     height: 70px;
   }
@@ -4643,6 +5027,8 @@ ul li {
     position: absolute;
     top: 68%;
     border-radius: 160px 90px 60px 160px/160px 230px 190px 260px;
+    -webkit-border-radius: 160px 90px 60px 160px/160px 230px 190px 260px;
+    -moz-border-radius: 160px 90px 60px 160px/160px 230px 190px 260px;
   }
 
   #loaf1 .bread-cut,
@@ -4659,7 +5045,9 @@ ul li {
   #steak {
     top: 400px;
     left: 10%;
+    transform: scale3d(0.6, 0.6, 1);
     -webkit-transform: scale3d(0.6, 0.6, 1);
+    -moz-transform: scale3d(0.6, 0.6, 1);
   }
 
   #loaf1 {
@@ -5033,8 +5421,10 @@ ul li {
 
   .barrel-top {
     height: 40px;
-    width: 6px;
+    width: 6 px;
     border-radius: 6px / 40px;
+    -webkit-border-radius: 6px / 40px;
+    -moz-border-radius: 6px / 40px;
     top: 2px;
     left: 1px;
     z-index: 4;
@@ -5047,6 +5437,8 @@ ul li {
     width: 360px;
     left: 0;
     border-radius: 20px/60px;
+    -webkit-border-radius: 20px/60px;
+    -moz-border-radius: 20px/60px;
   }
 
   .scope {
@@ -5098,7 +5490,6 @@ ul li {
     width: 10px;
     height: 8px;
     width: 8px;
-    border-radius: 11px;
   }
 
   .flag {
@@ -5266,12 +5657,13 @@ ul li {
   #prevention-steps li {
     float: left;
     display: inline-block;
-    width: 31%;
-    margin-right: 2%;
+    width: 28%;
+    margin-left: 4%;
     color: #798aa2;
     height: 110px;
     font-family: Trebuchet MS, sans-serif;
     line-height: 1.4;
+    font-size: .9em;
     position: relative;
     text-align: center;
     padding-top: 60px;
@@ -5284,10 +5676,6 @@ ul li {
     z-index: 15;
   }
   
-  #take-action-form {
-    padding: 30px;
-  }
-  
   #action-heading span {
     font-size: .2em;
     letter-spacing: 1.5em;
@@ -5297,41 +5685,45 @@ ul li {
     font-size: 3.4em;
   }
   
+  #take-action h3 {
+    font-size: 1.2em;
+    width: 90%;
+    margin: 0 auto 2em auto;
+  }
+  
   #prevention-heading span {
     font-size: .2em;
     letter-spacing: 1em;
-    color: #
+    color: #617B8A;
   }
 
   #template {
-    float: left;
-    width: 324px;
     font-size: .8em;
-    padding: 10px 0 10px 40px;
+    padding: 30px 30px 30px 290px;
     border-left: 4px solid #BEC7CF;
-    margin-top: 0;
+    position: relative;
   }
 
-  .instructions {
-    float: left;
+  #template .instructions {
+    position: absolute;
+    float: none;
+    top: 70px;
+    left: 30px;
     margin-bottom: 40px;
     text-align: center;
     font-size: 1.4em;
     line-height: 1.4;
-    padding: 130px 40px 0px 0px;
+    padding: 90px 0 0px 0px;
     color: #73797E;
     background: #fff;
     font-family: Georgia, serif;
-    background: transparent url(../images/template_icon_bg.png) 40px 30px no-repeat;
-    width: 260px;
+    background: transparent url(../images/template_icon_bg.png) top center no-repeat;
+    width: 220px;
     border: none;
   }
 
   #template p {
-    color: #4f5155;
-    text-align: left;
     font-size: 1.2em;
-    line-height: 1.4;
   }
 
   .break {
@@ -5342,7 +5734,7 @@ ul li {
     font-size: 1.3em;
     padding: 14px 10px 15px 50px;
     margin: 0 auto;
-    width: 400px;
+    width: 550px;
     float: none;
     display: block;
     border: 1px solid #adb4bc;
@@ -5354,14 +5746,16 @@ ul li {
     float: none;
     position: absolute;
     top: 2px;
-    width: 100px;
-    left: 402px;
+    width: 200px;
+    left: 406px;
     background: #70351C;
     border: 1px solid #550F0F;
-    padding: 14px 20px 16px;
-    font-size: 1em;
+    padding: 12px 20px 13px;
+    font-size: 1.3em;
     color: #fff;
     text-shadow: 0 -1px 0 #283d48;
+    -webkit-text-shadow: 0 -1px 0 #283d48;
+    -moz-text-shadow: 0 -1px 0 #283d48;
     cursor: pointer;
     margin-top: 0;
   }
@@ -5373,6 +5767,8 @@ ul li {
 
   #action-heading {
     font-size: 4em;
+    margin-bottom: .4em;
+    padding-bottom: .3em;
   }
 
   #footer {
@@ -5386,6 +5782,14 @@ ul li {
   #wrapper {
     width: 970px;
     margin-bottom: 50px;
+  }
+  
+  #main-heading .one {
+    margin-left: .03em;
+  }
+  
+  #effects-intro {
+    font-size: 5em;
   }
 
   #toolbar {
@@ -5460,15 +5864,22 @@ ul li {
     font-size: 3em;
     line-height: 3.4em;
     border-radius: 200px;
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
     z-index: 2;
   }
-
+  
   #template {
-    width: 526px;
+    padding-left: 330px;
   }
   
+  #template .instructions {
+    top: 50px;
+    width: 260px;
+  }
+
   #submit {
-    left: 502px;
+    left: 507px;
   }
 
   #footer {
@@ -5496,13 +5907,107 @@ ul li {
     font-size: 4em;
   }
   
+  #action-heading {
+    font-size: 5em;
+  }
+  
   #take-action h3 {
     font-size: 1.3em;
   }
+  
+  #prevention-steps,
+  #take-action {
+    padding-bottom: 50px;
+  }
 }
 
-@media screen and (min-width: 1280px) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), 
+only screen and (min-device-pixel-ratio: 2) {
+	#toolbar .icon {
+    background-image: url(../images/event_icons2x.png);
+    background-size: 210px 70px;
+  }
+  
+  #instructions .icon {
+    background-image: url(../images/intro_icons2x.png);
+    background-size: 255px 85px;
+  }
+  
+  #prevention-steps .icon {
+    background-image: url(../images/prevent_icons2x.png);
+    background-size: 135px 135px;
+  }
+}
 
+@keyframes lightning {
+  0% {
+    opacity: 1;
+  }
+  
+  3% {
+    opacity: 0;
+  }
+  
+  100% {
+    opacity: 0;
+  }  
+}
+
+@keyframes waves {
+  0% {
+    background-position: 0px 0;
+  }
+  
+  50% {
+    background-position: -40px 0;
+  }
+  
+  100% {
+    background-position: 0px 0;
+  }
+}
+
+@keyframes smoke {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dally {
+  0% {
+    margin-top: 0;
+    transform: rotate(0deg);
+  }
+  
+  33% {
+    margin-top: 50px;
+    margin-left: -100px;
+    transform: rotate(-5deg);
+  }
+  
+  33.1% {
+    transform: scaleX(-1) rotate(5deg);
+  }
+  
+  66% {
+    margin-top: -30px;
+    margin-left: 50px;
+    transform: rotate(-10deg) scaleX(-1); 
+  }
+  
+  66.1% {
+    transform: scaleX(1);
+  }
+  
+  100% {
+    margin-top: 0;
+    margin-left: 0;
+    transform: rotate(0deg); 
+  }
 }
 
 @-webkit-keyframes lightning {
@@ -5543,139 +6048,92 @@ ul li {
   }
 }
 
- 
-
-@-webkit-keyframes swim {
-  0% {
-    margin-top: 0;
-    -webkit-transform: rotate(0deg);
-  }
-  
-  33% {
-    margin-top: -100px;
-    margin-left: -300px;
-    -webkit-transform: rotate(30deg);
-  }
-  33.1% {
-    -webkit-transform: scaleX(-1) rotate(-20deg);
-  }
-  
-  66% {
-    margin-top: 50px;
-    margin-left: 300px;
-    -webkit-transform: rotate(30deg) scaleX(-1); 
-  }
-  
-  66.1% {
-    -webkit-transform: scaleX(1);
-  }
-  
-  100% {
-    margin-top: 0;
-    margin-left: 0;
-    -webkit-transform: rotate(0deg); 
-  }
-}
-
 @-webkit-keyframes dally {
   0% {
-    margin-top: 0;
-    -webkit-transform: rotate(0deg);
+    -webkit-transform: translate3d(0,0,0) rotate(0deg);
   }
   
   33% {
-    margin-top: 50px;
-    margin-left: -100px;
-    -webkit-transform: rotate(-5deg);
+    -webkit-transform: translate3d(-100px,50px,0) rotate(-5deg);
   }
+  
   33.1% {
-    -webkit-transform: scaleX(-1) rotate(5deg);
+    -webkit-transform: translate3d(-100px,50px,0) scaleX(-1) rotate(5deg);
   }
   
   66% {
-    margin-top: -30px;
-    margin-left: 50px;
-    -webkit-transform: rotate(-10deg) scaleX(-1); 
+    -webkit-transform: translate3d(50px,-30px,0) rotate(-10deg) scaleX(-1); 
   }
   
   66.1% {
-    -webkit-transform: scaleX(1);
+    -webkit-transform: translate3d(50px,-30px,0) scaleX(1);
   }
   
   100% {
-    margin-top: 0;
-    margin-left: 0;
-    -webkit-transform: rotate(0deg); 
+    -webkit-transform: translate3d(0,0,0) rotate(0deg); 
   }
 }
 
-@-webkit-keyframes dallyreverse {
+@-moz-keyframes lightning {
   0% {
-    margin-top: 0;
-    -webkit-transform: rotate(0deg) scaleX(-1);
+    opacity: 1;
+  }
+  
+  3% {
+    opacity: 0;
+  }
+  
+  100% {
+    opacity: 0;
+  }  
+}
+
+@-moz-keyframes waves {
+  0% {
+    background-position: 0px 0;
+  }
+  
+  50% {
+    background-position: -40px 0;
+  }
+  
+  100% {
+    background-position: 0px 0;
+  }
+}
+
+@-moz-keyframes smoke {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes dally {
+  0% {
+    -moz-transform: translate3d(0,0,0) rotate(0deg);
   }
   
   33% {
-    margin-left: 200px;
-    -webkit-transform: rotate(-5deg) scaleX(-1);
+    -moz-transform: translate3d(-100px,50px,0) rotate(-5deg);
   }
+  
   33.1% {
-    -webkit-transform: scaleX(1) rotate(5deg);
+    -moz-transform: translate3d(-100px,50px,0) scaleX(-1) rotate(5deg);
   }
   
   66% {
-    margin-left: -200px;
-    -webkit-transform: rotate(-10deg) scaleX(1); 
+    -moz-transform: translate3d(50px,-30px,0) rotate(-10deg) scaleX(-1); 
   }
   
   66.1% {
-    -webkit-transform: scaleX(-1);
+    -moz-transform: translate3d(50px,-30px,0) scaleX(1);
   }
   
   100% {
-    margin-top: 0;
-    margin-left: 0;
-    -webkit-transform: rotate(0deg) scaleX(-1); 
-  }
-}
-
-@-webkit-keyframes normalswim {
-  0% {
-    margin-top: 0;
-    -webkit-transform: rotate(0deg) scaleX(-1);
-  }
-  
-  33% {
-    margin-left: 400px;
-    margin-top: 100px;
-    -webkit-transform: rotate(-5deg) scaleX(-1);
-  }
-  33.1% {
-    -webkit-transform: scaleX(1) rotate(5deg);
-  }
-  
-  66% {
-    margin-left: -400px;
-    margin-top: -50px;
-    -webkit-transform: rotate(-10deg) scaleX(1); 
-  }
-  
-  66.1% {
-    -webkit-transform: scaleX(-1);
-  }
-  
-  100% {
-    margin-top: 0;
-    margin-left: 0;
-    -webkit-transform: rotate(0deg) scaleX(-1); 
-  }
-}
-
-@-webkit-keyframes slideshow {
-  0% {
-    -webkit-transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(-12150px);
+    -moz-transform: translate3d(0,0,0) rotate(0deg); 
   }
 }

@@ -3,6 +3,7 @@ $(function () {
       WaterView,
       GunView,
       TagView,
+      TextView,
       WarmingState,
       checkforMobile = function() {
         var isMobile = (/iphone|ipod|android|blackberry|opera mini|opera mobi|skyfire|maemo|windows phone|palm|iemobile|symbian|symbianos|fennec/i.test(navigator.userAgent.toLowerCase())),
@@ -18,6 +19,7 @@ $(function () {
       IS_WIDE = $(window).width() >= 768,
       IS_DESKTOP_CAPABLE = checkforMobile(),
       SCROLL_THROTTLE = 10,
+      TEXT_CHANGE_THRESHOLD = 100,
       WATER_TOP_OFFSET = 600,
       WATER_VIEW_START = 12370,
       WATER_VIEW_INCREMENT = .98,
@@ -55,6 +57,7 @@ $(function () {
     }
   });
   
+  
   ParallaxView = Backbone.View.extend({
     initialize : function () {
       _.bindAll(this);
@@ -80,6 +83,63 @@ $(function () {
     },
     
     onScroll : $.noop
+  });  
+  
+  TextView = ParallaxView.extend({
+    initialize : function () {
+      ParallaxView.prototype.initialize.call(this);
+
+      this.max = this.$el.position().top;
+      this.min = this.$el.position().top + TEXT_CHANGE_THRESHOLD;
+
+      this.start = this.$el.position().top;
+      this.startoffset = this.max - TEXT_CHANGE_THRESHOLD;
+      
+      if (IS_DESKTOP_CAPABLE) {
+        this.$el.css({
+          top : this.min,
+          opacity: 0
+        });
+      }
+    },
+    
+    onScroll : function () {
+      var offset = this.$el.position().top,
+          opacity;
+      
+      if (this.scrollingDown) {
+        if (this.scrollTop > this.startoffset) {
+          offset = this.min - (this.scrollTop - this.startoffset);
+         
+          opacity = (this.scrollTop - this.startoffset) / TEXT_CHANGE_THRESHOLD;
+          
+          offset = offset < this.start ? this.start : offset;
+
+          this.$el.css({
+            top : offset,
+            opacity: opacity
+          });
+        }
+      } else {
+        if (this.scrollTop > this.startoffset) {
+          offset = this.min - (this.scrollTop - this.startoffset);
+          
+          opacity = (this.scrollTop - this.startoffset) / TEXT_CHANGE_THRESHOLD;
+          
+          offset = offset < this.start ? this.start : offset;
+
+          this.$el.css({
+            top : offset,
+            opacity: opacity
+          });
+        } else {
+          this.$el.css({
+            top : this.min,
+            opacity: 0
+          });
+        }
+      }
+    }
   });
   
   WaterView = ParallaxView.extend({
@@ -88,7 +148,6 @@ $(function () {
 
       this.max = this.$el.position().top - WATER_TOP_OFFSET;
       this.min = this.$el.position().top;
-
 
       this.start = this.$el.position().top;
       this.checkPosition();
@@ -210,8 +269,7 @@ $(function () {
       var scrollTop = warmingState.get('scrollTop'),
           resetToolbar = function () {
             $('#toolbar a').removeClass('active');
-          },
-          isMobile = checkforMobile();
+          };
 
       
       resetToolbar();
@@ -270,7 +328,6 @@ $(function () {
       
       var el = $(ev.target)[0].tagName === "A" ? $(ev.target) : $(ev.target).parents('a'),
           href = el.attr('href'),
-          isMobile = checkforMobile(),
           offset;
           
       if (href) {
@@ -293,7 +350,8 @@ $(function () {
         
         offset = !IS_WIDE ? offsetValuesMobile[href] : offsetValuesDefault[href]
         
-        $('body').animate({scrollTop : offset}, SCROLL_SPEED);
+        /* Stupid Firefox */
+        $('html,  body').animate({scrollTop : offset}, SCROLL_SPEED);
       }
     });
     
@@ -321,6 +379,11 @@ $(function () {
     
     new WaterView({
       el : $('#water3'),
+      model : warmingState
+    });
+    
+    new TextView({
+      el : $('#effects-intro'),
       model : warmingState
     });
         
