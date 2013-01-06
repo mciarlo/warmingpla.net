@@ -346,18 +346,8 @@ ul li {
   font-size: 1em;
   z-index: 9998;
   right: 0;
-  width: 50%;
+  width: 100%;
   text-transform: uppercase;;
-}
-
-.left-edge {
-  border-top: 0 solid transparent;
-  border-right: 10px solid #7C3131;
-  border-bottom: 45px solid transparent;
-  border-left: 10px solid transparent;
-  position: absolute;
-  left: -20px;
-  top: 0;
 }
 
 #start-btn {
@@ -766,7 +756,7 @@ ul li {
 }
 
 #building2 .perspective-wall {
-  height: 485px
+  height: 470px;
 }
 
 .antenna {
@@ -3042,7 +3032,7 @@ ul li {
 /* Prevention ------------------------------------*/
 #prevention-steps {
   background: rgb(32,44,65);
-  padding: 0 50px 45px 50px;
+  padding: 0 25px 45px 25px;
   position: relative;
   z-index: 20;
 }
@@ -3054,13 +3044,12 @@ ul li {
 }
 
 #prevention-heading {
-  font-size: 3em;
   color: white;
   text-align: center;
   text-transform: uppercase;
   width: 100%;
   text-align: center;
-  font-size: 3.6em;
+  font-size: 3em;
   padding: 0 0 .3em 0;
   font-weight: normal;
   z-index: 10;
@@ -3071,34 +3060,40 @@ ul li {
 }
 
 #prevention-heading span {
-  font-size: .3em;
+  font-size: .2em;
   display: block;
-  letter-spacing: 1em;
+  color: #617B8A;
+  letter-spacing: .5em;
   margin-bottom: .4em;
 }
 
 #prevention-steps p {
   display: block;
-  color: white;
+  color: #798aa2;
   text-align: center;
-  font-size: 1.6em;
+  font-size: 1.4em;
   line-height: 1.4;
   font-family: Trebuchet MS, sans-serif;
-  margin-bottom: 2em;
+  margin-bottom: 2.2em;
 }
 
 #prevention-steps li {
-  float: left;
-  display: inline-block;
-  width: 31%;
-  margin-right: 2%;
+  text-align: center;
+  display: block;
+  width: 94%;
+  font-size: 1.1em;
+  margin: 0 auto 3em auto;
   color: #798aa2;
-  height: 110px;
   font-family: Trebuchet MS, sans-serif;
   line-height: 1.4;
   position: relative;
-  text-align: center;
-  padding-top: 60px;
+  padding-top: 55px;
+}
+
+#prevention-steps strong {
+  display: block;
+  font-size: 1.3em;
+  color: #798aa2;
 }
 
 #prevention-steps .icon {
@@ -3187,28 +3182,36 @@ ul li {
   z-index: 10;
   text-transform: uppercase;
   line-height: 1.1;
-  border-bottom: 5px solid #BEC7CF;
-  margin-bottom: .7em;
 }
 
 #action-heading span {
   display: block;
-  font-size: .25em;
-  letter-spacing: 10px;
+  font-size: .3em;
+  letter-spacing: 1em;
+  margin-bottom: .5em;
   color: #697681;
 }
 
+#take-action h3 {
+  display: block;
+  text-align: center;
+  color: #404B55;
+  font-size: 1em;
+  line-height: 1.4;
+  font-family: Trebuchet MS, sans-serif;
+  margin-bottom: 1.4em;
+}
+
 .instructions {
-  margin-bottom: 20px;
   text-align: left;
   font-size: 1.1em;
   line-height: 1.4;
-  padding: 0 0 20px 120px;
+  padding: 0 0 20px 82px;
   color: #73797E;
   display: block;
   background: #fff;
   font-family: Georgia, serif;
-  background: transparent url(../images/template_icon_bg_mobile.png) 10px 4px no-repeat;
+  background: transparent url(../images/template_icon_bg_mobile.png) 8px 6px no-repeat;
   border-bottom: 5px solid #BEC7CF;
   min-height: 48px;
 }
@@ -3216,8 +3219,8 @@ ul li {
 #template {
   float: left;
   width: 100%;
-  margin-bottom: 20px;
   font-size: .8em;
+  margin-top: 2em;
 }
 
 #template p {
@@ -3231,19 +3234,24 @@ ul li {
   margin-bottom: 10px;
 }
 
-#take-action-form {
+#input-container {
   position: relative;
+}
+
+#take-action-form {
   display: block;
-  float: left;
-  width: 100%;
+  background: #BEC7CF;
+  padding: 20px;
+  margin-bottom: 2em;
+  overflow: hidden;
 }
 
 #zipcode {
   font-size: 1.2em;
   padding: 9px 10px 10px 32px;
-  width: 70%;
-  float: left;
+  width: 100%;
   display: block;
+  margin: 0 auto;
   border: 1px solid #adb4bc;
   outline: none;
   background: white url(../images/zipcode_bg_mobile.png) 10px 8px no-repeat;
@@ -3251,10 +3259,20 @@ ul li {
   -webkit-appearance: none;
 }
 
-#submit {
-  width: 28%;
-  margin-left: 2%;
+#redirect-msg {
+  display: block;
+  text-align: center;
+  font-size: .75em;
+  color: #868b8e;
   float: left;
+  width: 100%;
+  margin-top: 1.8em;
+}
+
+#submit {
+  width: 100%;
+  display: block;
+  margin: 1em auto 0 auto;
   background: #70351C;
   border: 1px solid #550F0F;
   padding: 9px 20px 12px;
@@ -3539,8 +3557,8 @@ ul li {
     width: 124px;
     height: 299px;
     position: absolute;
-    top: 80%;
-    left: 45%;
+    top: 90%;
+    left: 40%;
   }
 
   .large-cloud {
@@ -5244,21 +5262,54 @@ ul li {
     width: 120px;
     background-position: -713px -320px;
   }
+  
+  #prevention-steps li {
+    float: left;
+    display: inline-block;
+    width: 31%;
+    margin-right: 2%;
+    color: #798aa2;
+    height: 110px;
+    font-family: Trebuchet MS, sans-serif;
+    line-height: 1.4;
+    position: relative;
+    text-align: center;
+    padding-top: 60px;
+  }
 
   /* Take Action ----------------------------*/
-
+  #prevention-steps,
   #take-action {
     padding: 50px 50px 60px 50px;
     z-index: 15;
+  }
+  
+  #take-action-form {
+    padding: 30px;
+  }
+  
+  #action-heading span {
+    font-size: .2em;
+    letter-spacing: 1.5em;
+  }
+  
+  #prevention-heading {
+    font-size: 3.4em;
+  }
+  
+  #prevention-heading span {
+    font-size: .2em;
+    letter-spacing: 1em;
+    color: #
   }
 
   #template {
     float: left;
     width: 324px;
-    margin-bottom: 40px;
     font-size: .8em;
     padding: 10px 0 10px 40px;
     border-left: 4px solid #BEC7CF;
+    margin-top: 0;
   }
 
   .instructions {
@@ -5299,19 +5350,12 @@ ul li {
     background: white url(../images/zipcode_bg.png) 18px 10px no-repeat;
   }
 
-  #take-action-form {
-    position: relative;
-    display: block;
-    float: left;
-    width: 100%;
-  }
-
   #submit {
     float: none;
     position: absolute;
-    top: 0;
+    top: 2px;
     width: 100px;
-    left: 419px;
+    left: 402px;
     background: #70351C;
     border: 1px solid #550F0F;
     padding: 14px 20px 16px;
@@ -5319,6 +5363,7 @@ ul li {
     color: #fff;
     text-shadow: 0 -1px 0 #283d48;
     cursor: pointer;
+    margin-top: 0;
   }
 
   #submit:hover {
@@ -5355,6 +5400,7 @@ ul li {
   #toolbar ul {
     width: 100%;
   }
+  
   #toolbar li {
     width: 156px;
     margin-left: 4px;
@@ -5420,9 +5466,9 @@ ul li {
   #template {
     width: 526px;
   }
-
+  
   #submit {
-    left: 516px;
+    left: 502px;
   }
 
   #footer {
@@ -5444,6 +5490,14 @@ ul li {
 
   #water3 {
     top: 1650px;
+  }
+  
+  #prevention-heading {
+    font-size: 4em;
+  }
+  
+  #take-action h3 {
+    font-size: 1.3em;
   }
 }
 
