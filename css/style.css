@@ -121,7 +121,7 @@ ul li {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#465e7f', endColorstr='#555f6d',GradientType=0 );
   height: 1300px;
   overflow: visible;
-  z-index: 8;
+  z-index: 20;
 }
 
 #blue-sky p {
@@ -373,10 +373,13 @@ ul li {
   width: 100%;
   height: 600px;
   z-index: 10;
+  animation: 30s slideshow linear infinite;
+  -webkit-animation: 30s slideshow linear infinite;
+  -moz-animation: 30s slideshow linear infinite;
 }
 
-#cloudscape .effect-label{
-  top: -50px;
+#blue-sky .effect-label{
+  top: 1250px;
 }
 
 #cloudscape:after {
@@ -1201,14 +1204,14 @@ ul li {
   width: 215px;
   height: 309px;
   top: 375px;
-  left: -55px;
+  left: -105px;
 }
 
 #rock2 {
   width: 242px;
   height: 292px;
   top: 420px;
-  right: -80px;
+  right: -120px;
   background-position: top right;
 }
 
@@ -3687,7 +3690,7 @@ ul li {
   display: inline-block;
   font-family: Trebuchet MS, sans-serif;
   color: #4E493B;
-  padding: 1em 0 1em 20px;
+  padding: 10px 0 11px 20px;
   margin: 0 2px;
   font-size: .8em;
   text-align: center;
@@ -3707,7 +3710,7 @@ ul li {
   height: 14px;
   display: block;
   position: absolute;
-  top: 11px;
+  top: 10px;
   left: 16px;
 }
 
@@ -3912,6 +3915,9 @@ ul li {
   #cloudscape {
     height: 1700px;
     z-index: 10;
+    animation: 50s slideshow linear infinite;
+    -webkit-animation: 50s slideshow linear infinite;
+    -moz-animation: 50s slideshow linear infinite;
   }
   
   #effects-intro {
@@ -6120,6 +6126,18 @@ only screen and (min-device-pixel-ratio: 2),  only screen and (max-width: 768px)
   }
 }
 
+@keyframes slideshow {
+  0% {
+    transform: translate3d(0,0,0);
+  }
+  50% {
+    transform: translate3d(-100px,0,0);
+  }
+  100% {
+    transform: translate3d(0,0,0);
+  }
+}
+
 @-webkit-keyframes lightning {
   0% {
     opacity: 1;
@@ -6184,6 +6202,18 @@ only screen and (min-device-pixel-ratio: 2),  only screen and (max-width: 768px)
   }
 }
 
+@-webkit-keyframes slideshow {
+  0% {
+    -webkit-transform: translate3d(0,0,0);
+  }
+  50% {
+    -webkit-transform: translate3d(-100px,0,0);
+  }
+  100% {
+    -webkit-transform: translate3d(0,0,0);
+  }
+}
+
 @-moz-keyframes lightning {
   0% {
     opacity: 1;
@@ -6245,5 +6275,17 @@ only screen and (min-device-pixel-ratio: 2),  only screen and (max-width: 768px)
   
   100% {
     -moz-transform: translate3d(0,0,0) rotate(0deg); 
+  }
+}
+
+@-moz-keyframes slideshow {
+  0% {
+    -moz-transform: translate3d(0,0,0);
+  }
+  50% {
+    -moz-transform: translate3d(-100px,0,0);
+  }
+  100% {
+    -moz-transform: translate3d(0,0,0);
   }
 }

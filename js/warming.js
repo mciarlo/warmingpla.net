@@ -19,6 +19,7 @@ $(function () {
       IS_WIDE = $(window).width() >= 768,
       IS_DESKTOP_CAPABLE = checkforMobile(),
       SCROLL_THROTTLE = 10,
+      CLOUDSCAPE_ANIMATION_OFFSET = 100,
       TEXT_CHANGE_THRESHOLD = 100,
       WATER_TOP_OFFSET = 600,
       WATER_VIEW_START = 12370,
@@ -265,7 +266,12 @@ $(function () {
             var testInput = document.createElement('input');
             return ('placeholder' in testInput);
         },
-        $toolbar = $('#toolbar');
+        $toolbar = $('#toolbar'),
+        resize = function () {
+          var width = $(window).width();
+
+          $('#cloudscape').width(width + CLOUDSCAPE_ANIMATION_OFFSET);
+        };
         
     warmingState.on('change', function () {
       var scrollTop = warmingState.get('scrollTop'),
@@ -358,7 +364,11 @@ $(function () {
         }
       });
     }
+    
+    $(window).resize(resize);
       
+    resize();
+    
     $('#toolbar a').click(function (ev) {
       ev.preventDefault();
       
