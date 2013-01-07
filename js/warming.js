@@ -26,6 +26,7 @@ $(function () {
       GUN_VIEW_ACTIVATE_PERCENTAGE = 0.6,
       GUN_SHOT_DELAY = 50,
       TAG_ANIMATION_SPEED = 200,
+      TOOLBAR_ANIMATION_SPEED = 150,
       SCROLL_SPEED = 1400,
       HOUSE_URL = 'http://house.gov/htbin/findrep?ZIP=';
         
@@ -263,44 +264,79 @@ $(function () {
         hasPlaceholder = function () {
             var testInput = document.createElement('input');
             return ('placeholder' in testInput);
-        };
+        },
+        $toolbar = $('#toolbar');
         
     warmingState.on('change', function () {
       var scrollTop = warmingState.get('scrollTop'),
           resetToolbar = function () {
-            $('#toolbar a').removeClass('active');
+            $toolbar.find('a').removeClass('active');
+          },
+          showToolbar = function () {
+            $toolbar.css('top', 0).removeClass('hidden');
+          },
+          hideToolbar = function () {
+            if ($toolbar.hasClass('hidden')) {
+              return;
+            }
+           
+            $toolbar.addClass('hidden');
+  
+            $toolbar.animate({
+              top: - $toolbar.outerHeight()
+            }, TOOLBAR_ANIMATION_SPEED);
           };
 
       
       resetToolbar();
       
       if (!IS_WIDE) {
-        if (scrollTop > 1011 &&  scrollTop < 1845) {
+        if (scrollTop < 1011) {
+          showToolbar();
+        } else if (scrollTop > 1011 &&  scrollTop < 1845) {
           $('#storms').addClass('active');
+          showToolbar();
         } else if (scrollTop > 1845 && scrollTop < 2523) {
           $('#extinction').addClass('active');
+          showToolbar();
         } else if (scrollTop > 2523 && scrollTop < 4272) {
           $('#diseases').addClass('active');
+          showToolbar();
         } else if (scrollTop > 4272 && scrollTop < 5452) {
           $('#shortages').addClass('active');
+          showToolbar();
         } else if (scrollTop > 5452 && scrollTop < 6997) {
           $('#global-violence').addClass('active');
+          showToolbar();
         } else if (scrollTop > 6997 && scrollTop < 7786) {
           $('#oceans').addClass('active');
+          showToolbar();
+        } else if (scrollTop > 7786) {
+          hideToolbar();
         }
       } else {
-        if (scrollTop > 526 &&  scrollTop < 2362) {
+        if (scrollTop < 526) {
+          showToolbar();
+        } else if (scrollTop > 526 &&  scrollTop < 2362) {
           $('#storms, #cloudscape').addClass('active');
+          showToolbar();
         } else if (scrollTop > 2362 && scrollTop < 3638) {
           $('#extinction').addClass('active');
+          showToolbar();
         } else if (scrollTop > 3638 && scrollTop < 6679) {
           $('#diseases').addClass('active');
+          showToolbar();
         } else if (scrollTop > 6679 && scrollTop < 8832) {
           $('#shortages').addClass('active');
+          showToolbar();
         } else if (scrollTop > 8832 && scrollTop < 11624) {
           $('#global-violence').addClass('active');
+          showToolbar();
         } else if (scrollTop > 11624 && scrollTop < 13048) {
           $('#oceans').addClass('active');
+          showToolbar();
+        } else if (scrollTop > 13048) {
+          hideToolbar();
         }
       }
     });

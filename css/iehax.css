@@ -591,6 +591,21 @@ margin-left: 1px;
   color: #444;
 }
 
+#heart {
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  left: 50%;
+  top: -27px;
+  margin-left: -27px;
+  background: transparent url(../images/ie_heart.png) 0 0 no-repeat;
+  text-align: center;
+}
+
+#heart img {
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
   #instructions li {
     width: 26.6%;
