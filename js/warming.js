@@ -114,7 +114,15 @@ $(function () {
           offset = this.min - (this.scrollTop - this.startoffset);
          
           opacity = (this.scrollTop - this.startoffset) / TEXT_CHANGE_THRESHOLD;
-          
+
+	  if (opacity < 0) {
+   	    opacity = 0;
+	  }
+
+	  if (opacity > 1) {
+	    opacity = 1;
+	  }
+
           offset = offset < this.start ? this.start : offset;
 
           this.$el.css({
