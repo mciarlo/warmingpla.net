@@ -6035,6 +6035,20 @@ only screen and (min-device-pixel-ratio: 2) {
   }
 }
 
+@media only screen and (-webkit-min-device-pixel-ratio: 2), 
+only screen and (min-device-pixel-ratio: 2),  only screen and (max-width: 768px){
+  #template .instructions {
+    background-image: url(../images/template_icon_bg_mobile2x.png);
+    background-size: 48px 27px;
+  }
+  
+  #zipcode {
+    background-image: url(../images/zipcode_bg_mobile2x.png);
+    background-size: 15px 25px;
+  }
+
+}
+
 @keyframes lightning {
   0% {
     opacity: 1;
