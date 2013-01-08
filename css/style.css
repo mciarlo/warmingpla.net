@@ -60,14 +60,15 @@ ul li {
 }
 
 #toolbar ul {
-  margin: 0 2%;
+  float: left;
+  width: 100%;
 }
 
 #toolbar li {
   list-style: none;
   float: left;
-  width: 14.6%;
-  margin: 0 1%;
+  width: 15.5%;
+  margin: 0 0 0 1%;
 }
 
 #toolbar a {
@@ -125,7 +126,7 @@ ul li {
 }
 
 #blue-sky p {
-  padding-top: 100px;
+  padding-top: 90px;
   text-align: center;
   color: white;
   text-transform: uppercase;
@@ -148,7 +149,7 @@ ul li {
   font-size: 3em;
   padding: 100px 0 25px 0;
   font-weight: normal;
-  border-bottom: 3px solid #8591a2;
+  border-bottom: 3px solid #5F738B;
   text-transform: uppercase;
   color: white;
   z-index: 10;
@@ -250,7 +251,7 @@ ul li {
 
 #instructions strong {
   color: white;
-  font-size: 1.4em;
+  font-size: 1.3em;
   display: block;
   margin-top: .2em;
   font-weight: normal;
@@ -371,7 +372,7 @@ ul li {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#555f6d', endColorstr='#202c41',GradientType=0 );
   position: relative;
   width: 100%;
-  height: 600px;
+  height: 1000px;
   z-index: 10;
   animation: 30s slideshow linear infinite;
   -webkit-animation: 30s slideshow linear infinite;
@@ -425,7 +426,7 @@ ul li {
 
 #intro-of {
   font-size: .2em;
-  margin: .4em 0;
+  margin: .8em 0 .2em 0;
 }
 
 /* Clouds */
@@ -435,41 +436,41 @@ ul li {
 }
 
 .lightning {
-  background: transparent url(../images/clouds_mobile.png) -262px -149px no-repeat;
-  width: 41px;
-  height: 100px;
+  background: transparent url(../images/clouds_mobile.png) -441px -251px no-repeat;
+  width: 61px;
+  height: 148px;
   position: absolute;
-  top: 80%;
+  top: 85%;
   left: 45%;
   display: block;
 }
 
 .large-cloud {
   background-position: 0 0;
-  width: 255px;
-  height: 111px;
+  width: 425px;
+  height: 185px;
 }
 
 .large-cloud.gray {
-  background-position: 0 -111px;
+  background-position: 0 -185px;
 }
 
 .large-cloud.dark {
-  background-position: 0 -222px;
+  background-position: 0 -370px;
 }
 
 .small-cloud {
-  background-position: -262px 0;
-  width: 90px;
-  height: 45px;
+  background-position: -439px 0;
+  width: 148px;
+  height: 76px;
 }
 
 .small-cloud.gray {
-  background-position: -262px -45px;
+  background-position: -439px -76px;
 }
 
 .small-cloud.dark {
-  background-position: -262px -91px;
+  background-position: -439px -152px;
 }
 
 #cloud3,
@@ -478,7 +479,6 @@ ul li {
 #cloud9,
 #cloud10,
 #cloud12,
-#cloud13,
 #cloud15 {
   z-index: 0;
 }
@@ -493,29 +493,30 @@ ul li {
 
 #cloud1,
 #cloud2,
+#cloud13,
 #cloud16 {
   z-index: 2;
 }
 
 #cloud1 {
   top: 133px;
-  left: -1%;
+  left: -20%;
   z-index: 20;
 }
 
 #cloud2 {
-  top: 176px;
+  top: 276px;
   left: 54%;
 }
 
 #cloud3 {
   top: 42px;
-  right: -12%;
+  right: -10%;
 }
 
 #cloud4 {
   top: 72px;
-  left: -29%;
+  left: -15%;
   transform: scale3d(0.7, 0.7, 1);
   -webkit-transform: scale3d(0.7, 0.7, 1);
   -moz-transform: scale3d(0.7, 0.7, 1);
@@ -523,11 +524,11 @@ ul li {
 
 #cloud5 {
   top: 70px;
-  left: 19%;
+  left: 39%;
 }
 
 #cloud6 {
-  top: 193px;
+  top: 328px;
   left: -26%;
 }
 
@@ -538,15 +539,15 @@ ul li {
 
 #cloud8 {
   top: 20px;
-  right: 43%;
+  right: 46%;
   transform: scale3d(0.7, 0.7, 1);
   -webkit-transform: scale3d(0.7, 0.7, 1);
   -moz-transform: scale3d(0.7, 0.7, 1);
 }
 
 #cloud9 {
-  top: 170px;
-  right: 13%;
+  top: 250px;
+  right: 1%;
 }
 
 #cloud10 {
@@ -555,35 +556,35 @@ ul li {
 }
 
 #cloud11 {
-  top: 343px;
+  top: 543px;
   left: 38%;
 }
 
 #cloud12 {
   top: 410px;
-  left: 53%;
+  left: 33%;
 }
 
 #cloud13 {
   top: 520px;
-  right: 2%;
+  right: 3%;
 }
 
 #cloud14 {
-  top: 350px;
-  right: 80%;
+  top: 670px;
+  right: 70%;
 }
 
 #cloud15 {
-  top: 360px;
-  left: -12%;
+  top: 560px;
+  left: -32%;
   transform: scale3d(0.8, 0.8, 1);
   -webkit-transform: scale3d(0.8, 0.8, 1);
   -moz-transform: scale3d(0.8, 0.8, 1);
 }
 
 #cloud16 {
-  top: 476px;
+  top: 676px;
   left: 9%;
 }
 
@@ -1133,11 +1134,6 @@ ul li {
   top: 700px;
 }
 
-#water1 .waves {
-  -webkit-animation: 6s waves ease-in-out infinite;
-  -moz-animation: 6s waves ease-in-out infinite;
-}
-
 #water2 {
   z-index: 11;
   top: 720px;
@@ -1148,14 +1144,22 @@ ul li {
   top: 657px;
 }
 
+#water1 .waves {
+  animation: 6s waves ease-in-out infinite;
+  -webkit-animation: 6s waves ease-in-out infinite;
+  -moz-animation: 6s waves ease-in-out infinite;
+}
+
 #water2 .waves {
   background-position: 20px 0;
+  animation: 5s waves ease-in-out infinite;
   -webkit-animation: 5s waves ease-in-out infinite;
   -moz-animation: 5s waves ease-in-out infinite;
 }
 
 #water3 .waves {
   background-position: 30px 0;
+  animation: 7s waves ease-in-out infinite;
   -webkit-animation: 7s waves ease-in-out infinite;
   -moz-animation: 7s waves ease-in-out infinite;
 }
@@ -2504,7 +2508,7 @@ ul li {
   background: white;
   text-transform: uppercase;
   font-size: .3em;
-  padding: 7px 0 7px 10px;
+  padding: 3px 0 3px 10px;
   color: #999;
   margin-left: 23px;
 }
@@ -2558,7 +2562,7 @@ ul li {
   width: 33px;
   height: 180px;
   background: #c1c1c1;
-  top: 69px;
+  top: 61px;
   right: -10px;
 }
 
@@ -2608,7 +2612,7 @@ ul li {
   width: 320px;
   height: 448px;
   top: 50px;
-  left: -12%;
+  left: -32%;
   transform: scale3d(0.3, 0.3, 1);
   -webkit-transform: scale3d(0.3, 0.3, 1);
   -moz-transform: scale3d(0.3, 0.3, 1);
@@ -2622,14 +2626,14 @@ ul li {
   background: -o-linear-gradient(left,  rgba(121,82,44,1) 0%,rgba(99,54,9,1) 66%,rgba(64,35,5,1) 100%);
   background: -ms-linear-gradient(left,  rgba(121,82,44,1) 0%,rgba(99,54,9,1) 66%,rgba(64,35,5,1) 100%);
   background: linear-gradient(to right,  rgba(121,82,44,1) 0%,rgba(99,54,9,1) 66%,rgba(64,35,5,1) 100%);
-  width: 400px;
-  height: 70px;
+  height: 400px;
+  width: 70px;
   position: absolute;
-  top: 750px;
-  left: 76px;
-  border-radius: 80px 80px 60px 60px/45px 45px 30px 30px;
-  -webkit-border-radius: 80px 80px 60px 60px/45px 45px 30px 30px;
-  -moz-border-radius: 80px 80px 60px 60px/45px 45px 30px 30px;
+  left: 50%;
+  z-index: 0;
+  border-radius: 80px 45px 30px 80px/80px 115px 95px 130px;
+  -webkit-border-radius: 80px 45px 30px 80px/80px 115px 95px 130px;
+  -moz-border-radius: 80px 45px 30px 80px/80px 115px 95px 130px;
 }
 
 .bread-cut {
@@ -2639,7 +2643,7 @@ ul li {
   width: 35px;
   height: 35px;
   background: rgb(158,113,69);
-  margin: 2% 4% 0 4%;
+  margin: 49% 2% 0 5%;
   display: inline-block;
   background: -moz-linear-gradient(-45deg,  rgba(158,113,69,1) 1%, rgba(158,113,69,1) 44%, rgba(99,54,9,1) 56%, rgba(78,48,21,1) 100%);
   background: -webkit-gradient(linear, left top, right bottom, color-stop(1%,rgba(158,113,69,1)), color-stop(44%,rgba(158,113,69,1)), color-stop(56%,rgba(99,54,9,1)), color-stop(100%,rgba(78,48,21,1)));
@@ -2653,71 +2657,41 @@ ul li {
   margin-left: 8%;
 }
 
-#loaf1,
-#loaf2,
-#loaf3,
-#loaf5,
-#loaf6,
-#loaf7 {
-  height: 400px;
-  width: 70px;
-  position: absolute;
-  top: 68%;
-  left: 2%;
-  border-radius: 80px 45px 30px 80px/80px 115px 95px 130px;
-  -webkit-border-radius: 80px 45px 30px 80px/80px 115px 95px 130px;
-  -moz-border-radius: 80px 45px 30px 80px/80px 115px 95px 130px;
-}
-
-#loaf1 .bread-cut,
-#loaf2 .bread-cut,
-#loaf3 .bread-cut,
-#loaf5 .bread-cut,
-#loaf6 .bread-cut,
-#loaf7 .bread-cut {
-  width: 35px;
-  height: 35px;
-  margin: 49% 2% 0 5%;
-}
-
-#loaf1,
-#loaf2,
-#loaf3,
-#loaf4,
-#loaf5,
-#loaf6,
-#loaf7 {
-  z-index: 0;
-}
-
 #loaf1 {
-  top: 375px;
-  left: -2%;
+  top: 425px;
+  margin-left: -266px;
 }
 
 #loaf2 {
-  top: 450px;
-  left: 19%;
+  top: 455px;
+  margin-left: -190px;
 }
 
 #loaf3 {
-  top: 350px;
-  left: 40%;
+  top: 380px;
+  left: 50%;
+  margin-left: -114px;
+}
+
+#loaf4 {
+  top: 400px;
+  left: 50%;
+  margin-left: -38px;
 }
 
 #loaf5 {
-  top: 375px;
-  left: 60%;
+  top: 415px;
+  margin-left: 38px;
 }
 
 #loaf6 {
-  top: 345px;
-  left: 81%;
+  top: 375px;
+  margin-left: 114px;
 }
 
 #loaf7 {
-  top: 455px;
-  left: 99%;
+  top: 465px;
+  margin-left: 190px;
 }
 
 /* Violence ----------------------------------*/
@@ -3690,7 +3664,7 @@ ul li {
   display: inline-block;
   font-family: Trebuchet MS, sans-serif;
   color: #4E493B;
-  padding: 10px 0 11px 20px;
+  padding: 11px 0 14px 20px;
   margin: 0 2px;
   font-size: .8em;
   text-align: center;
@@ -3807,13 +3781,13 @@ ul li {
   }
 
   #toolbar ul {
-    width: 99%;
+    width: 100%;
     margin: 0;
   }
 
   #toolbar li {
-    width: 15.6%;
-    margin: 0 0 0 1%;
+    width: 124px;
+    margin: 0 0 0 3px;
   }
 
   #toolbar .icon {
@@ -3862,7 +3836,7 @@ ul li {
     width: 26.7%;
     padding: 100px 3% 10px 3%;
     font-size: 1.05em;
-    border-left: 2px solid #69788D;
+    border-left: 2px solid #5F738B;
   }
 
   #instructions li:first-child {
@@ -3936,26 +3910,30 @@ ul li {
     height: 600px;
     z-index: 15;
   }
-
+  
   #cloud1 {
     top: 366px;
+    left: -5%;
   }
 
   #cloud2 {
     top: 680px;
+    left: 54%;
   }
 
   #cloud3 {
     top: 42px;
-    right: -32%;
+    right: -12%;
   }
 
   #cloud4 {
     top: 216px;
+    left: -35%;
   }
 
   #cloud5 {
     top: 210px;
+    left: 10%;
   }
 
   #cloud6 {
@@ -3968,11 +3946,11 @@ ul li {
 
   #cloud8 {
     top: 28px;
-    right: 33%;
+    right: 43%;
   }
 
   #cloud9 {
-    top: 720px;
+    top: 580px;
   }
 
   #cloud10 {
@@ -3989,8 +3967,9 @@ ul li {
 
   #cloud13 {
     top: 350px;
+    right: -17%;
   }
-
+  
   #cloud14 {
     top: 1050px;
   }
@@ -4334,37 +4313,17 @@ ul li {
 
   #water1 {
     z-index: 3;
-    top: 1250px;
-  }
-
-  #water1 .waves {
-    animation: 6s waves ease-in-out infinite;
-    -webkit-animation: 6s waves ease-in-out infinite;
-    -moz-animation: 6s waves ease-in-out infinite;
+    top: 1700px;
   }
 
   #water2 {
     z-index: 11;
-    top: 1300px;
+    top: 1750px;
   }
 
   #water3 {
     z-index: 0;
-    top: 1200px;
-  }
-
-  #water2 .waves {
-    background-position: 20px 0;
-    animation: 5s waves ease-in-out infinite;
-    -webkit-animation: 5s waves ease-in-out infinite;
-    -moz-animation: 5s waves ease-in-out infinite;
-  }
-
-  #water3 .waves {
-    background-position: 30px 0;
-    animation: 7s waves ease-in-out infinite;
-    -webkit-animation: 7s waves ease-in-out infinite;
-    -moz-animation: 7s waves ease-in-out infinite;
+    top: 1650px;
   }
 
   .water {
@@ -4372,11 +4331,9 @@ ul li {
   }
 
   .waves {
-    position: absolute;
     top: -11px;
     background: transparent url(../images/water.png) 0 0 repeat-x;
     height: 11px;
-    width: 100%;
   }
 
 
@@ -5017,6 +4974,7 @@ ul li {
     height: 11px;
     font-size: .7em;
     margin-left: 46px;
+    padding: 7px 0 7px 10px
   }
 
   #carton-top {
@@ -5103,8 +5061,8 @@ ul li {
   }
 
   .bread {
-    width: 800px;
-    height: 140px;
+    height: 800px;
+    width: 140px;
     border-radius: 160px 90px 60px 160px/160px 230px 190px 260px;
     -webkit-border-radius: 160px 90px 60px 160px/160px 230px 190px 260px;
     -moz-border-radius: 160px 90px 60px 160px/160px 230px 190px 260px;
@@ -5118,32 +5076,6 @@ ul li {
     height: 70px;
   }
 
-  #loaf1,
-  #loaf2,
-  #loaf3,
-  #loaf5,
-  #loaf6,
-  #loaf7 {
-    height: 800px;
-    width: 140px;
-    position: absolute;
-    top: 68%;
-    border-radius: 160px 90px 60px 160px/160px 230px 190px 260px;
-    -webkit-border-radius: 160px 90px 60px 160px/160px 230px 190px 260px;
-    -moz-border-radius: 160px 90px 60px 160px/160px 230px 190px 260px;
-  }
-
-  #loaf1 .bread-cut,
-  #loaf2 .bread-cut,
-  #loaf3 .bread-cut,
-  #loaf5 .bread-cut,
-  #loaf6 .bread-cut,
-  #loaf7 .bread-cut {
-    width: 70px;
-    height: 70px;
-    margin: 49% 2% 0 5%;
-  }
-
   #steak {
     top: 400px;
     left: 10%;
@@ -5153,30 +5085,38 @@ ul li {
   }
 
   #loaf1 {
-    top: 750px;
+    top: 800px;
+    margin-left: -546px;
   }
 
   #loaf2 {
-    top: 900px;
+    top: 860px;
+    margin-left: -390px;
   }
 
   #loaf3 {
-    top: 700px;
+    top: 750px;
+    margin-left: -234px;
+  }
+
+  #loaf4 {
+    top: 790px;
+    margin-left: -78px;
   }
 
   #loaf5 {
-    top: 750px;
-    left: 61%;
+    top: 800px;
+    margin-left: 78px;
   }
 
   #loaf6 {
-    top: 690px;
-    left: 82%;
+    top: 850px;
+    margin-left: 234px;
   }
 
   #loaf7 {
-    top: 910px;
-    left: 100%;
+    top: 810px;
+    margin-left: 390px;
   }
 
   /* Violence ----------------------------------*/
@@ -5911,14 +5851,23 @@ ul li {
   }
   
   #toolbar li {
-    width: 156px;
-    margin-left: 4px;
+    width: 158px;
+    margin-left: 3px;
+  }
+  
+  #toolbar li:first-child {
+    margin-left: 1px;
   }
 
   #main-heading {
     font-size: 5em;
   }
-
+  
+  #cloud13 {
+    top: 400px;
+    right: -4%;
+  }
+  
   #rock1 {
     left: -100px;
   }
@@ -5999,7 +5948,7 @@ ul li {
   #water3 {
     top: 1650px;
   }
-  
+
   #prevention-heading {
     font-size: 4em;
   }

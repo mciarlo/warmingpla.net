@@ -6,9 +6,9 @@ $(function () {
       TextView,
       WarmingState,
       checkforMobile = function() {
-        var isMobile = (/iphone|ipod|android|blackberry|opera mini|opera mobi|skyfire|maemo|windows phone|palm|iemobile|symbian|symbianos|fennec/i.test(navigator.userAgent.toLowerCase())),
-        isTablet = (/ipad|android 3|sch-i800|playbook|tablet|kindle|gt-p1000|sgh-t849|shw-m180s|a510|a511|a100|dell streak|silk/i.test(navigator.userAgent.toLowerCase())),
-        windowWidth = $(window).width();
+        var isMobile  = (/iphone|ipod|android|blackberry|opera mini|opera mobi|skyfire|maemo|windows phone|palm|iemobile|symbian|symbianos|fennec/i.test(navigator.userAgent.toLowerCase())),
+        isTablet      = (/ipad|android 3|sch-i800|playbook|tablet|kindle|gt-p1000|sgh-t849|shw-m180s|a510|a511|a100|dell streak|silk/i.test(navigator.userAgent.toLowerCase())),
+        windowWidth   = $(window).width();
 
         if (windowWidth < 768 || isMobile || isTablet) {
           return false;
@@ -108,46 +108,31 @@ $(function () {
     onScroll : function () {
       var offset = this.$el.position().top,
           opacity;
-      
-      if (this.scrollingDown) {
-        if (this.scrollTop > this.startoffset) {
-          offset = this.min - (this.scrollTop - this.startoffset);
-         
-          opacity = (this.scrollTop - this.startoffset) / TEXT_CHANGE_THRESHOLD;
-
-	  if (opacity < 0) {
-   	    opacity = 0;
-	  }
-
-	  if (opacity > 1) {
-	    opacity = 1;
-	  }
-
-          offset = offset < this.start ? this.start : offset;
-
-          this.$el.css({
-            top : offset,
-            opacity: opacity
-          });
+            
+      if (this.scrollTop > this.startoffset) {
+        offset = this.min - (this.scrollTop - this.startoffset);
+        
+        opacity = (this.scrollTop - this.startoffset) / TEXT_CHANGE_THRESHOLD;
+        
+        if (opacity < 0) {
+          opacity = 0;
         }
+        
+        if (opacity > 1) {
+          opacity = 1;
+        }
+        
+        offset = offset < this.start ? this.start : offset;
+
+        this.$el.css({
+          top : offset,
+          opacity: opacity
+        });
       } else {
-        if (this.scrollTop > this.startoffset) {
-          offset = this.min - (this.scrollTop - this.startoffset);
-          
-          opacity = (this.scrollTop - this.startoffset) / TEXT_CHANGE_THRESHOLD;
-          
-          offset = offset < this.start ? this.start : offset;
-
-          this.$el.css({
-            top : offset,
-            opacity: opacity
-          });
-        } else {
-          this.$el.css({
-            top : this.min,
-            opacity: 0
-          });
-        }
+        this.$el.css({
+          top : this.min,
+          opacity: 0
+        });
       }
     }
   });
@@ -158,31 +143,37 @@ $(function () {
 
       this.max = this.$el.position().top - WATER_TOP_OFFSET;
       this.min = this.$el.position().top;
-
       this.start = this.$el.position().top;
-      this.checkPosition();
+      this.windowObject = $(window);
+      
+      if (IS_DESKTOP_CAPABLE) {
+        this.checkPosition();
+      } else {
+        this.setOffset();
+      }
+      
+      this.windowObject.resize(this.onResize);
     },
     
     onScroll : function () {
-      var offset = this.$el.position().top;
+      var offset = this.$el.position().top,
+          defaultOffset = this.scrollingDown ? this.max : this.start;
       
-      if (this.scrollingDown) {
-        if (this.scrollTop > WATER_VIEW_START) {
-          offset = this.start - (this.scrollTop - WATER_VIEW_START);
+      if (this.scrollTop > WATER_VIEW_START) {
+        offset = this.start - (this.scrollTop - WATER_VIEW_START);
 
-          offset = offset < this.max ? this.max : offset;
+        offset = offset > this.start ? this.start : offset;
 
-          this.$el.css('top', offset);
-        }
+        this.$el.css('top', offset);
       } else {
-        if (this.scrollTop > WATER_VIEW_START) {
-          offset = this.start - (this.scrollTop - WATER_VIEW_START);
-
-          offset = offset > this.start ? this.start : offset;
-
-          this.$el.css('top', offset);
-        }
+        this.$el.css('top', this.start);
       }
+    },
+    
+    setOffset : function () {
+      var offset = IS_WIDE ? 450 : 0;
+        
+      this.$el.css('top', this.start - offset);
     }
   });
     
@@ -276,7 +267,7 @@ $(function () {
         },
         $toolbar = $('#toolbar'),
         resize = function () {
-          var width = $(window).width();
+          var width = $('#wrapper').width();
 
           $('#cloudscape').width(width + CLOUDSCAPE_ANIMATION_OFFSET);
         };
@@ -307,31 +298,31 @@ $(function () {
       if (!IS_WIDE) {
         if (scrollTop < 1011) {
           showToolbar();
-        } else if (scrollTop > 1011 &&  scrollTop < 1845) {
+        } else if (scrollTop > 1011 &&  scrollTop < 2245) {
           $('#storms').addClass('active');
           showToolbar();
-        } else if (scrollTop > 1845 && scrollTop < 2523) {
+        } else if (scrollTop > 2245 && scrollTop < 2923) {
           $('#extinction').addClass('active');
           showToolbar();
-        } else if (scrollTop > 2523 && scrollTop < 4272) {
+        } else if (scrollTop > 2923 && scrollTop < 4672) {
           $('#diseases').addClass('active');
           showToolbar();
-        } else if (scrollTop > 4272 && scrollTop < 5452) {
+        } else if (scrollTop > 4672 && scrollTop < 5852) {
           $('#shortages').addClass('active');
           showToolbar();
-        } else if (scrollTop > 5452 && scrollTop < 6997) {
+        } else if (scrollTop > 5852 && scrollTop < 7397) {
           $('#global-violence').addClass('active');
           showToolbar();
-        } else if (scrollTop > 6997 && scrollTop < 7786) {
+        } else if (scrollTop > 7397 && scrollTop < 8186) {
           $('#oceans').addClass('active');
           showToolbar();
-        } else if (scrollTop > 7786) {
+        } else if (scrollTop > 8186) {
           hideToolbar();
         }
       } else {
         if (scrollTop < 526) {
           showToolbar();
-        } else if (scrollTop > 526 &&  scrollTop < 2362) {
+        } else if (scrollTop > 526 && scrollTop < 2362) {
           $('#storms, #cloudscape').addClass('active');
           showToolbar();
         } else if (scrollTop > 2362 && scrollTop < 3638) {
@@ -377,6 +368,12 @@ $(function () {
       
     resize();
     
+    $('#back-to-top').click(function (ev) {
+      ev.preventDefault();
+      
+      $('html,  body').animate({scrollTop : 0}, SCROLL_SPEED);
+    });
+    
     $('#toolbar a').click(function (ev) {
       ev.preventDefault();
       
@@ -395,11 +392,11 @@ $(function () {
           },
           offsetValuesMobile = {
             '#cloudscape' : 1201,
-            '#ocean'      : 1951,
-            '#petri-dish' : 2801,
-            '#grocery'    : 4411,
-            '#violence'   : 5741,
-            '#cityscape'  : 7191
+            '#ocean'      : 2351,
+            '#petri-dish' : 3201,
+            '#grocery'    : 4811,
+            '#violence'   : 6141,
+            '#cityscape'  : 7591
           };
         
         offset = !IS_WIDE ? offsetValuesMobile[href] : offsetValuesDefault[href]
